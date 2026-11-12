@@ -1,59 +1,690 @@
-import type { Question } from './types';
-export const quizletUrls:Record<number,string>={2:'https://quizlet.com/ca/704589033/aws-module-2-knowledge-check-flash-cards/',3:'https://quizlet.com/875909579/aws-module-3-knowledge-check-flash-cards/',4:'https://quizlet.com/877920643/aws-developer-module-4-knowledge-check-flash-cards/',5:'https://quizlet.com/877926687/aws-developer-module-5-knowledge-check-flash-cards/',6:'https://quizlet.com/883769808/aws-module-6-knowledge-check-flash-cards/'};
-const cards:Question[]=[];
-function q(module:number,topic:string,prompt:string,options:string[],keys:number[],explanation:string,extra:Partial<Question>={}) {
- const n=cards.filter(c=>c.module===module).length+1;
- cards.push({id:`f${module}-${n}`,module,topic,prompt,options,answer:keys.map(i=>options[i-1]),type:keys.length>1?'multiple':options.length===2?'boolean':'single',difficulty:keys.length>1?'Medium':'Easy',source:'From Flashcards',reference:`${quizletUrls[module]} · card ${n}`,explanation,originalAnswer:keys.map(i=>`${i}. ${options[i-1]}`).join('\n'),...extra});
+import type { Question } from "./types";
+export const quizletUrls: Record<number, string> = {
+  2: "https://quizlet.com/ca/704589033/aws-module-2-knowledge-check-flash-cards/",
+  3: "https://quizlet.com/875909579/aws-module-3-knowledge-check-flash-cards/",
+  4: "https://quizlet.com/877920643/aws-developer-module-4-knowledge-check-flash-cards/",
+  5: "https://quizlet.com/877926687/aws-developer-module-5-knowledge-check-flash-cards/",
+  6: "https://quizlet.com/883769808/aws-module-6-knowledge-check-flash-cards/",
+};
+const cards: Question[] = [];
+function q(
+  module: number,
+  topic: string,
+  prompt: string,
+  options: string[],
+  keys: number[],
+  explanation: string,
+  extra: Partial<Question> = {},
+) {
+  const n = cards.filter((c) => c.module === module).length + 1;
+  cards.push({
+    id: `f${module}-${n}`,
+    module,
+    topic,
+    prompt,
+    options,
+    answer: keys.map((i) => options[i - 1]),
+    type:
+      keys.length > 1
+        ? "multiple"
+        : options.length === 2
+          ? "boolean"
+          : "single",
+    difficulty: keys.length > 1 ? "Medium" : "Easy",
+    source: "From Flashcards",
+    reference: `${quizletUrls[module]} · card ${n}`,
+    explanation,
+    originalAnswer: keys.map((i) => `${i}. ${options[i - 1]}`).join("\n"),
+    ...extra,
+  });
 }
-q(2,'2-sdlc','The systems development lifecycle (SDLC) has six phases. The first three phases are plan, define, and design. What are the last three phases of the SDLC?',['Develop, deploy, and maintain','Code, build, and test','Test, deploy, and maintain','Code, build, and maintain'],[1],'The six phases are plan, define, design, develop, deploy and maintain. Code/build/test are development activities. M02 slides 9–11, 55.');
-q(2,'2-sdlc','Which task is performed during the develop stage of the systems development lifecycle (SDLC)?',['Deficiencies are identified.','New system requirements are defined.','New components are obtained and installed.','The system is put into use.'],[3],'Develop implements and tests the system, including installing components. Defining requirements precedes it; putting the system into use is deployment. M02 slide 9.');
-q(2,'2-start','A systems administrator must grant a new developer permissions associated with the developer role. This role is associated with the developer group. Which AWS service should the administrator use to assign the developer to the group?',['AWS Identity and Access Management (IAM)','Amazon Elastic Compute Cloud (Amazon EC2)','Amazon Simple Storage Service (Amazon S3)','AWS Resource Access Manager (AWS RAM)'],[1],'IAM manages users, groups, roles and policies. EC2 is compute, S3 is storage and RAM shares supported resources. M02 slides 15–16.',{correction:'Source terminology is imprecise: groups contain users and carry policies; roles are separately assumed, not group members.'});
-q(2,'2-q','A developer is setting up their development environment. They need an integrated development environment (IDE) that enables them to code with other people in real time. Which AWS service should they use?',['Amazon CloudWatch','AWS Cloud9','Amazon CloudFront','AWS CloudShell'],[2],'Cloud9 is the collaborative browser IDE intended by the original card. CloudWatch monitors, CloudFront distributes content and CloudShell provides a shell.',{correction:'This is the older Quizlet IDE question. The supplied updated M02 slides 38–50 separately cover Amazon Q Developer as an AI coding assistant.'});
-q(2,'2-start','What are three ways to interact with AWS service application programming interfaces (APIs)? (Select THREE.)',['AWS Management Console','AWS software development kits (SDKs)','AWS CloudTrail','AWS Command Line Interface (AWS CLI)','AWS X-Ray','AWS Identity and Access Management (IAM)'],[1,2,4],'Console, SDKs and CLI invoke service APIs. CloudTrail audits calls, X-Ray traces requests and IAM controls access. M02 slides 18–20.');
-q(2,'2-cli','Which tools enable users to control their AWS services from the command line and automate service management with scripts? (Select THREE.)',['AWS Serverless Application Model (AWS SAM)','AWS Tools for PowerShell','AWS Cloud9','AWS X-Ray','AWS CodeCommit','AWS Amplify'],[1,2,6],'The lecture’s command-line tools include SAM, Tools for PowerShell and Amplify tooling. Cloud9 is an IDE, X-Ray traces and CodeCommit is source control. M02 slide 20.');
-q(2,'2-sdk','True or False: Service client APIs provide a lower level of abstraction than the higher-level calls made by resource APIs.',['True','False'],[1],'Clients expose service operations; resource APIs expose conceptual objects and collections. M02 slides 27–28.');
-q(2,'2-sdk','Which statements describe AWS resource application programming interfaces (APIs)? (Select TWO best distinguishing descriptions.)',['They provide a higher-level abstraction than low-level service client calls.','They provide a lower-level abstraction than service client calls.','They have objects for request and result data.','They provide access to resources through objects and collections.','They have at least one class per conceptual resource.'],[1,4],'The source selects higher-level abstraction and objects/collections. Request/result data is a client API description. M02 slides 27–28.',{correction:'Ambiguous original: option 5 is also supported by M02 slide 28 (“one class per conceptual resource”). The two source-selected answers are preserved; this card is excluded from scored quizzes.',type:'short',originalAnswer:'1. Higher-level abstraction than service clients.\n4. Access through objects and collections.'});
-q(2,'2-config','A developer uses the AWS SDK for Python (Boto3) and must specify the Region. Which method enables this?',['Set the Region when instantiating the service client.','Set the AWS_PROFILE environment variable.','Users cannot specify Regions in the service client.','Associate a default Region with the profile in the credentials file.'],[1],'Use region_name at client creation. AWS_PROFILE selects a profile; default Region belongs in the config file, not the credentials file. M02 slide 29.');
-q(2,'2-config','A developer makes an API call to access an S3 bucket that does not exist. Which HTTP response-code series do they receive?',['200 series','300 series','400 series','500 series'],[3],'A missing resource is a client-error condition such as 404. 2xx means success, 3xx redirection, and 5xx server errors. M02 slide 30.');
-q(3,'3-basics','A student is asked how Amazon S3 can be used as a storage solution. Which option is a use case for Amazon S3?',['Block-level storage','Hosting active databases','Shared file systems','Data lake'],[4],'S3 is object storage used for data lakes. Block devices, running database storage and shared filesystems are different storage models. M03 slides 8–9.');
-q(3,'3-buckets','Creating images-bucket returns BucketAlreadyExists. Which action must the developer take?',['Choose a different available bucket name because names are globally unique.','Create images-bucket in a different Region because names are Region-specific.','Contact AWS Support to request the same name.','Outbid the current bucket owner.'],[1],'Select a new available name at creation; moving Regions does not remove the namespace conflict. Existing buckets cannot simply be renamed. M03 slide 13.',{originalAnswer:'1. Bucket names are globally unique. If the requested bucket name is not available, the developer must rename the bucket.'});
-q(3,'3-basics','A ______ organizes the Amazon S3 namespace at the highest level.',['Container','Group','Bucket','Region'],[3],'Objects live in buckets. IAM groups organize users, and a Region is a deployment location. M03 slide 10.');
-q(3,'3-buckets','A static website is in frank-martha-cafe in us-east-1. Which option has the intended S3 website endpoint hostname? (The original card uses HTTPS.)',['https://s3-website-us-east-1.amazonaws.com/frank-martha-cafe','https://frank-martha-cafe.s3-us-east-1.amazonaws.com','https://www.frank-martha-cafe.s3-website-us-east-1.amazonaws.com','https://frank-martha-cafe.s3-website-us-east-1.amazonaws.com'],[4],'The fourth option has the intended bucket-prefixed website hostname. The working website endpoint scheme is http://, not https://. M03 slide 15.',{correction:'All original choices use HTTPS, which S3 website endpoints do not support directly. Prompt explicitly asks for the hostname pattern. Use CloudFront or another HTTPS front end for TLS.'});
-q(3,'3-version','True or False: After versioning is enabled on an S3 bucket, it can be disabled.',['True','False'],[2],'Versioning can be suspended after enabling; it cannot return to the original unversioned state. M03 slide 23.');
-q(3,'3-upload','What is the largest object a user can upload to Amazon S3 in a single PUT operation, as taught in the lecture?',['1 GB','5 GB','100 MB','5 TB'],[2],'5 GB is the single-PUT limit in the course. 100 MB is the multipart recommendation threshold; 5 TB is the historical overall object limit. M03 slide 20.');
-q(3,'3-security','A developer wants to grant a particular IAM user any S3 operation on a bucket and its objects. Which permission mechanism should they apply to the bucket?',['Bucket ACL','IAM policy','Cross-origin resource sharing (CORS)','Bucket policy'],[4],'A bucket policy is a resource policy attached to the bucket with granular actions, principals and resource ARNs. CORS does not authorize access; ACLs are coarse. M03 slides 29–31.');
-q(3,'3-urls','A developer wants a user to download private S3 objects without their own AWS credentials. What can the developer share for time-limited access?',['A presigned URL','A temporary token','The bucket endpoint URL','Their AWS account root credentials'],[1],'A presigned GET URL delegates the signer’s permission until expiration. A plain endpoint URL grants nothing by itself. M03 slide 32.',{originalAnswer:'3. The bucket endpoint URL',correction:'Incorrect source key. Corrected to option 1, a presigned URL, using M03 slide 32 and AWS S3 presigned-URL documentation.'});
-q(3,'3-security','Which method encrypts S3 objects in transit?',['SSE-C','SSL/TLS','SSE-S3','SSE-KMS'],[2],'TLS protects network transport. The SSE options encrypt stored data at rest. M03 slide 28.');
-q(3,'3-urls','An S3 static website references images in another S3 bucket, but they do not display. Which listed issue could affect cross-origin JavaScript access?',['CORS has not been enabled on the assets bucket.','Cross-Region Replication has not been enabled.','S3 does not support object sharing between buckets.','The S3 bucket security group lacks inbound port 80.'],[1],'CORS can prevent browser JavaScript from reading cross-origin resources. CRR is replication, and buckets do not have EC2 security groups. M03 slide 33.',{correction:'Original wording merely says images do not display. That alone is insufficient to diagnose CORS: ordinary <img> embedding often needs no CORS. Practice wording specifies JavaScript access.'});
-q(4,'4-shared','Which options are the AWS customer responsible for under the shared responsibility model? (Select TWO.)',['Security group configuration','Physical servers','Client-side data','Edge-location infrastructure','Availability Zone security'],[1,3],'Customers manage their data and security-group configuration. AWS secures physical infrastructure and facilities. M04 slides 7–12.');
-q(4,'4-policy','Which IAM resource explicitly grants or denies permissions to a user or group?',['IAM roles','IAM users','IAM groups','IAM policies'],[4],'Policies contain the permission statements evaluated for the request. Users, groups and roles are identities or identity collections. M04 slides 27–32.');
-q(4,'4-auth','What is the process of verifying a user’s identity called?',['Endorsement','Authentication','Confirmation','Authorization'],[2],'Authentication establishes identity; authorization determines permitted actions. M04 slide 15.');
-q(4,'4-auth','Which statements about IAM user authentication are true in the card’s AWS-account context? (Select TWO.)',['Provide AWS credentials to authenticate to supported services.','Provide a username and password to authenticate to the console.','Use a .pem or .ppk file to authenticate programmatically to the AWS API.','Use account root credentials for routine AWS CLI authentication.','Each AWS account can have only one administrator.'],[1,2],'IAM user console sign-in uses a username/password and API requests use appropriate AWS credentials. SSH keys are not AWS API keys, root use is not routine best practice, and multiple administrators are possible. M04 slides 19–25.');
-q(4,'4-roles','What does AWS recommend for credentials used by applications on EC2 instances?',['Embed credentials in SDK client code.','Store long-lived credentials in local configuration files.','Create an IAM role and attach it to the EC2 instance.','Create an IAM user and attach it to the EC2 instance.'],[3],'An instance role provides temporary credentials without embedding long-lived keys. IAM users are not attached as instance roles. M04 slides 21, 25, 47–49.');
-q(4,'4-policy','What format is used by IAM policies defining allowable API calls?',['YAML','SAML','CSV','JSON'],[4],'IAM policies are JSON documents. YAML is often used in infrastructure templates; SAML is a federation format, and CSV is tabular data. M04 slides 30–35.');
-q(4,'4-policy','An IAM policy attached to a managers group allows S3 reads and writes in the same account. What type of policy is it?',['Identity-based','Resource-based','Cross-account access','AdministratorAccess managed'],[1],'The attachment to an IAM group makes it identity-based. A bucket policy would be resource-based. The stated permission does not imply AdministratorAccess. M04 slide 29.');
-q(4,'4-eval','Which statement reflects best practices when granting permissions?',['Start with broad access and limit it later.','Use root for routine administration.','Create policies following least privilege.','Do not set policies for individual resources.'],[3],'Grant the minimum required actions and resources, then add only justified permissions. M04 slide 36.');
-q(4,'4-eval','What is the intended effect of a statement with Effect: Deny, Action: ["dynamodb:*", "s3:*"], and NotResource listing the pollynotes table and selected S3 resources?',['Deny those actions on DynamoDB/S3 resources except those listed in NotResource.','Deny those actions only on the listed resources.','Deny writing to the listed pollynotes table.','Deny reading the listed polly-notes-web bucket.'],[1],'NotResource selects resources outside the list. This deny does not grant permissions to listed exceptions. M04 slides 34–35.',{correction:'The source contains malformed Action strings (“dynamodb:” and “s#:”). Practice restores the lecture’s intended dynamodb:* and s3:* values; the original key is unchanged.'});
-q(4,'4-eval','Which statements are true about IAM policy evaluation? (Select TWO.)',['A policy cannot include both deny and allow statements.','An explicit allow overrides an explicit deny.','An explicit deny overrides an explicit allow.','By default, requests are denied.','By default, requests are allowed.'],[3,4],'The default is implicit deny; any applicable explicit deny wins over an allow. M04 slides 33–35, 57.');
-q(5,'5-options','Which statement best describes DynamoDB?',['An in-memory data store that boosts database performance','A graph database optimized for billions of relationships','A relational database compatible with MySQL and PostgreSQL','A key-value and document database that scales horizontally'],[4],'DynamoDB is key-value/document storage. The other descriptions correspond to cache, graph and relational services. M05 slides 8–19.');
-q(5,'5-keys','Which component is part of a DynamoDB table?',['Predefined schema','SQL-based queries','Attributes','Columns'],[3],'The lecture uses tables, items and attributes. A table specifies its key schema but does not require a fixed schema for all non-key attributes. M05 slides 16–19.');
-q(5,'5-keys','SensorReadings has SensorId as partition key and timestamp as sort key. Which statement is true?',['The pair is a simple primary key.','Two items cannot have the same partition key.','Two items cannot have the same sort key.','Two items cannot have the same complete primary key.'],[4],'The composite pair must be unique. Partition or sort values individually can repeat. M05 slide 17.');
-q(5,'5-partitions','Which statement about DynamoDB partitions is true?',['DynamoDB chooses the partition based on the range attribute.','With a simple key, DynamoDB stores and retrieves an item based on its hash attribute.','With a composite key, items are sorted before partition selection.','The developer writes DynamoDB’s hash function.'],[2],'The partition/hash-key value is input to DynamoDB’s own hash function. The sort key orders data within a key grouping. M05 slides 21–24.');
-q(5,'5-index','A restaurants table is queried by name (partition key) and location (sort key). How can it also be queried by cuisine and average customer rating?',['Create an LSI on cuisine and rating.','Create a GSI on cuisine and rating.','Change the existing table primary key in place to cuisine and rating.','Query cuisine and rating without an index.'],[2],'A GSI provides a new partition key and sort key. An LSI retains name as the partition key; an ordinary Query cannot use arbitrary non-key fields. M05 slides 26–29.',{originalAnswer:'?? either 2 or 5',correction:'The source answer is unresolved and mentions a nonexistent option 5. Corrected to option 2, a GSI, from M05 slides 26–29.'});
-q(5,'5-consistency','A game purchase requires multiple profile updates as one all-or-nothing user action. What is the best approach?',['Add a DAX cache.','Implement global tables.','Write custom checking and rollback code for separate writes.','Use DynamoDB transactions.'],[4],'Transactions supply coordinated atomic changes. Caching and replication do not provide this multi-item atomic operation. M05 slides 32, 62.');
-q(5,'5-streams','Which scenarios are uses for DynamoDB Streams? (Select TWO.)',['Fastest possible reads for real-time bidding','Repeated reads of regional weather data for a long analysis','Notify friends when a new picture is uploaded','Monitor table changes and act when a value crosses a threshold','Provide an in-memory data store'],[3,4],'Streams emits changes that consumers can act on. It is not a read cache or general in-memory datastore. M05 slides 42, 47, 79.');
-q(5,'5-streams','Which statement about global tables is true?',['They replicate within only one Region.','They use S3 to propagate changes between replicas.','DynamoDB creates replicas and propagates changes to the specified Regions.','They support partial replication of selected table items.'],[3],'The course describes managed replication of the table across Regions. S3 is not the replication mechanism. M05 slides 43–47.');
-q(5,'5-backup','What is the maximum recovery history for a DynamoDB table with point-in-time recovery enabled?',['The last week','The last 10 days','The last 35 days','The last calendar month'],[3],'PITR supports up to 35 days, limited by the configured recovery period and available history. It does not provide history from before it was enabled. Source: Quizlet M05 card 9; lecture introduces PITR at slides 49, 84.');
-q(5,'5-crud','Which statement describes DynamoDB API control operations?',['Create and manage DynamoDB tables.','Create, read, update and delete data in a table.','Get and write batches of items.','Make coordinated all-or-nothing changes across items.'],[1],'Control operations manage tables; the alternatives describe data, batch and transaction operations. M05 slide 51.');
-q(6,'6-api','What phrase best describes a RESTful API?',['An API using HTTP between client and server','A proxy handling common API application problems','An API following Representational State Transfer principles','An API residing on a web server'],[3],'REST is an architectural style. HTTP use or server location alone does not prove adherence to REST principles. M06 slide 11.');
-q(6,'6-api','Which option suggests using WebSocket APIs?',['Returning an order number after submitting an order','Sending a batch of orders to fulfillment','A real-time customer-support chat','Serving static daily reports to phones'],[3],'Chat benefits from a persistent bidirectional connection. The other scenarios can use ordinary requests or batch processing. M06 slides 16, 20–21.');
-q(6,'6-types','Which use case suggests API Gateway HTTP APIs?',['A simple API proxy in front of Lambda','VTL response transformation before returning Lambda results','Mock endpoints for testing','Different API quotas for each client'],[1],'HTTP APIs suit simple proxies. The course’s advanced mapping, mock and usage-plan scenarios select REST APIs. M06 slide 18.');
-q(6,'6-endpoints','Which statement about API Gateway integrations is true?',['First-class integration connects an HTTP API route to an external third-party service API.','HTTP proxy integration can direct a route to an internet resource.','API Gateway cannot access VPC resources.','An integration request is always different from the client’s method request.'],[2],'HTTP proxy integration forwards to a reachable HTTP backend. First-class integrations target supported AWS actions; VPC links reach private resources. Passthrough requests need not be transformed. M06 slides 45–53.');
-q(6,'6-mapping','A client sends given name, surname, business phone and cellphone. The backend stores name and mobile phone. Which option requires the fewest application changes?',['Export the API definition and update the client.','Use a mapping template to transform the request.','Create a usage plan describing the fields.','Use a first-class integration to connect the client to the database.'],[2],'A mapping template can combine names and select/rename fields. Usage plans govern consumption, not payload shape. M06 slides 42–44.');
-q(6,'6-routes','Which elements are part of the base URI AWS generates for the lecture’s API Gateway API?',['Region and stage name','API identifier and version','Account ID and stage name','Region and version'],[1],'The REST invoke URL contains API ID, Region and stage. Account ID and a separate version field are not required URI elements. M06 slide 25.');
-q(6,'6-routes','In aws apigatewayv2 create-route, which option creates a route that returns an individual product from an online catalog?',["route-key 'GET /products/{product_id}'","route-key 'PUT /products'","route-selection-expression '$GET/product'","route-selection-expression 'PUT /products/{proxy+}'"],[1],'GET retrieves a resource, and product_id identifies the desired item. PUT writes; route-selection-expression is not the HTTP route-key option. M06 slides 27–30.',{correction:'Original snippet misspells target and shows a Lambda ARN directly. The lesson preserves the route-key answer; executable CLI examples use integrations/INTEGRATION_ID.'});
-q(6,'6-stage','Which statement about API Gateway stages is true?',['Stage names are sequentially assigned from API versions.','Any stage on any API type can autodeploy.','Stage variables can connect different stages to different backends.','Avoid creating separate stages for development environments.'],[3],'Developers name stages and can set backend-specific variables. Auto-deployment support differs by API type. M06 slides 55–60.');
-q(6,'6-protect','A team wants to protect APIs against SQL injection and cross-site scripting. Which solution most directly addresses this?',['Set method throttling limits.','Make every API endpoint private.','Configure a JWT authorizer.','Use AWS WAF with API Gateway.'],[4],'WAF examines requests for exploit patterns. Throttling limits rates, private endpoints restrict reachability and authorizers validate callers. M06 slide 66.');
-q(6,'6-monitor','What does the API Gateway IntegrationLatency metric tell you?',['Frequency of server errors affecting latency','End-to-end API response speed to the client','Responsiveness of the backend','How often requests are throttled'],[3],'IntegrationLatency measures the backend request/response interval. Latency includes the wider API Gateway processing interval. M06 slides 81, 137.');
+q(
+  2,
+  "2-sdlc",
+  "The systems development lifecycle (SDLC) has six phases. The first three phases are plan, define, and design. What are the last three phases of the SDLC?",
+  [
+    "Develop, deploy, and maintain",
+    "Code, build, and test",
+    "Test, deploy, and maintain",
+    "Code, build, and maintain",
+  ],
+  [1],
+  "The six phases are plan, define, design, develop, deploy and maintain. Code/build/test are development activities. M02 slides 9–11, 55.",
+);
+q(
+  2,
+  "2-sdlc",
+  "Which task is performed during the develop stage of the systems development lifecycle (SDLC)?",
+  [
+    "Deficiencies are identified.",
+    "New system requirements are defined.",
+    "New components are obtained and installed.",
+    "The system is put into use.",
+  ],
+  [3],
+  "Develop implements and tests the system, including installing components. Defining requirements precedes it; putting the system into use is deployment. M02 slide 9.",
+);
+q(
+  2,
+  "2-start",
+  "A systems administrator must grant a new developer permissions associated with the developer role. This role is associated with the developer group. Which AWS service should the administrator use to assign the developer to the group?",
+  [
+    "AWS Identity and Access Management (IAM)",
+    "Amazon Elastic Compute Cloud (Amazon EC2)",
+    "Amazon Simple Storage Service (Amazon S3)",
+    "AWS Resource Access Manager (AWS RAM)",
+  ],
+  [1],
+  "IAM manages users, groups, roles and policies. EC2 is compute, S3 is storage and RAM shares supported resources. M02 slides 15–16.",
+  {
+    correction:
+      "Source terminology is imprecise: groups contain users and carry policies; roles are separately assumed, not group members.",
+  },
+);
+q(
+  2,
+  "2-q",
+  "A developer is setting up their development environment. They need an integrated development environment (IDE) that enables them to code with other people in real time. Which AWS service should they use?",
+  ["Amazon CloudWatch", "AWS Cloud9", "Amazon CloudFront", "AWS CloudShell"],
+  [2],
+  "Cloud9 is the collaborative browser IDE intended by the original card. CloudWatch monitors, CloudFront distributes content and CloudShell provides a shell.",
+  {
+    correction:
+      "This is the older Quizlet IDE question. The supplied updated M02 slides 38–50 separately cover Amazon Q Developer as an AI coding assistant.",
+  },
+);
+q(
+  2,
+  "2-start",
+  "What are three ways to interact with AWS service application programming interfaces (APIs)? (Select THREE.)",
+  [
+    "AWS Management Console",
+    "AWS software development kits (SDKs)",
+    "AWS CloudTrail",
+    "AWS Command Line Interface (AWS CLI)",
+    "AWS X-Ray",
+    "AWS Identity and Access Management (IAM)",
+  ],
+  [1, 2, 4],
+  "Console, SDKs and CLI invoke service APIs. CloudTrail audits calls, X-Ray traces requests and IAM controls access. M02 slides 18–20.",
+);
+q(
+  2,
+  "2-cli",
+  "Which tools enable users to control their AWS services from the command line and automate service management with scripts? (Select THREE.)",
+  [
+    "AWS Serverless Application Model (AWS SAM)",
+    "AWS Tools for PowerShell",
+    "AWS Cloud9",
+    "AWS X-Ray",
+    "AWS CodeCommit",
+    "AWS Amplify",
+  ],
+  [1, 2, 6],
+  "The lecture’s command-line tools include SAM, Tools for PowerShell and Amplify tooling. Cloud9 is an IDE, X-Ray traces and CodeCommit is source control. M02 slide 20.",
+);
+q(
+  2,
+  "2-sdk",
+  "True or False: Service client APIs provide a lower level of abstraction than the higher-level calls made by resource APIs.",
+  ["True", "False"],
+  [1],
+  "Clients expose service operations; resource APIs expose conceptual objects and collections. M02 slides 27–28.",
+);
+q(
+  2,
+  "2-sdk",
+  "Which statements describe AWS resource application programming interfaces (APIs)? (Select TWO best distinguishing descriptions.)",
+  [
+    "They provide a higher-level abstraction than low-level service client calls.",
+    "They provide a lower-level abstraction than service client calls.",
+    "They have objects for request and result data.",
+    "They provide access to resources through objects and collections.",
+    "They have at least one class per conceptual resource.",
+  ],
+  [1, 4],
+  "The source selects higher-level abstraction and objects/collections. Request/result data is a client API description. M02 slides 27–28.",
+  {
+    correction:
+      "Ambiguous original: option 5 is also supported by M02 slide 28 (“one class per conceptual resource”). The two source-selected answers are preserved; this card is excluded from scored quizzes.",
+    type: "short",
+    originalAnswer:
+      "1. Higher-level abstraction than service clients.\n4. Access through objects and collections.",
+  },
+);
+q(
+  2,
+  "2-config",
+  "A developer uses the AWS SDK for Python (Boto3) and must specify the Region. Which method enables this?",
+  [
+    "Set the Region when instantiating the service client.",
+    "Set the AWS_PROFILE environment variable.",
+    "Users cannot specify Regions in the service client.",
+    "Associate a default Region with the profile in the credentials file.",
+  ],
+  [1],
+  "Use region_name at client creation. AWS_PROFILE selects a profile; default Region belongs in the config file, not the credentials file. M02 slide 29.",
+);
+q(
+  2,
+  "2-config",
+  "A developer makes an API call to access an S3 bucket that does not exist. Which HTTP response-code series do they receive?",
+  ["200 series", "300 series", "400 series", "500 series"],
+  [3],
+  "A missing resource is a client-error condition such as 404. 2xx means success, 3xx redirection, and 5xx server errors. M02 slide 30.",
+);
+q(
+  3,
+  "3-basics",
+  "A student is asked how Amazon S3 can be used as a storage solution. Which option is a use case for Amazon S3?",
+  [
+    "Block-level storage",
+    "Hosting active databases",
+    "Shared file systems",
+    "Data lake",
+  ],
+  [4],
+  "S3 is object storage used for data lakes. Block devices, running database storage and shared filesystems are different storage models. M03 slides 8–9.",
+);
+q(
+  3,
+  "3-buckets",
+  "Creating images-bucket returns BucketAlreadyExists. Which action must the developer take?",
+  [
+    "Choose a different available bucket name because names are globally unique.",
+    "Create images-bucket in a different Region because names are Region-specific.",
+    "Contact AWS Support to request the same name.",
+    "Outbid the current bucket owner.",
+  ],
+  [1],
+  "Select a new available name at creation; moving Regions does not remove the namespace conflict. Existing buckets cannot simply be renamed. M03 slide 13.",
+  {
+    originalAnswer:
+      "1. Bucket names are globally unique. If the requested bucket name is not available, the developer must rename the bucket.",
+  },
+);
+q(
+  3,
+  "3-basics",
+  "A ______ organizes the Amazon S3 namespace at the highest level.",
+  ["Container", "Group", "Bucket", "Region"],
+  [3],
+  "Objects live in buckets. IAM groups organize users, and a Region is a deployment location. M03 slide 10.",
+);
+q(
+  3,
+  "3-buckets",
+  "A static website is in frank-martha-cafe in us-east-1. Which option has the intended S3 website endpoint hostname? (The original card uses HTTPS.)",
+  [
+    "https://s3-website-us-east-1.amazonaws.com/frank-martha-cafe",
+    "https://frank-martha-cafe.s3-us-east-1.amazonaws.com",
+    "https://www.frank-martha-cafe.s3-website-us-east-1.amazonaws.com",
+    "https://frank-martha-cafe.s3-website-us-east-1.amazonaws.com",
+  ],
+  [4],
+  "The fourth option has the intended bucket-prefixed website hostname. The working website endpoint scheme is http://, not https://. M03 slide 15.",
+  {
+    correction:
+      "All original choices use HTTPS, which S3 website endpoints do not support directly. Prompt explicitly asks for the hostname pattern. Use CloudFront or another HTTPS front end for TLS.",
+  },
+);
+q(
+  3,
+  "3-version",
+  "True or False: After versioning is enabled on an S3 bucket, it can be disabled.",
+  ["True", "False"],
+  [2],
+  "Versioning can be suspended after enabling; it cannot return to the original unversioned state. M03 slide 23.",
+);
+q(
+  3,
+  "3-upload",
+  "What is the largest object a user can upload to Amazon S3 in a single PUT operation, as taught in the lecture?",
+  ["1 GB", "5 GB", "100 MB", "5 TB"],
+  [2],
+  "5 GB is the single-PUT limit in the course. 100 MB is the multipart recommendation threshold; 5 TB is the historical overall object limit. M03 slide 20.",
+);
+q(
+  3,
+  "3-security",
+  "A developer wants to grant a particular IAM user any S3 operation on a bucket and its objects. Which permission mechanism should they apply to the bucket?",
+  [
+    "Bucket ACL",
+    "IAM policy",
+    "Cross-origin resource sharing (CORS)",
+    "Bucket policy",
+  ],
+  [4],
+  "A bucket policy is a resource policy attached to the bucket with granular actions, principals and resource ARNs. CORS does not authorize access; ACLs are coarse. M03 slides 29–31.",
+);
+q(
+  3,
+  "3-urls",
+  "A developer wants a user to download private S3 objects without their own AWS credentials. What can the developer share for time-limited access?",
+  [
+    "A presigned URL",
+    "A temporary token",
+    "The bucket endpoint URL",
+    "Their AWS account root credentials",
+  ],
+  [1],
+  "A presigned GET URL delegates the signer’s permission until expiration. A plain endpoint URL grants nothing by itself. M03 slide 32.",
+  {
+    originalAnswer: "3. The bucket endpoint URL",
+    correction:
+      "Incorrect source key. Corrected to option 1, a presigned URL, using M03 slide 32 and AWS S3 presigned-URL documentation.",
+  },
+);
+q(
+  3,
+  "3-security",
+  "Which method encrypts S3 objects in transit?",
+  ["SSE-C", "SSL/TLS", "SSE-S3", "SSE-KMS"],
+  [2],
+  "TLS protects network transport. The SSE options encrypt stored data at rest. M03 slide 28.",
+);
+q(
+  3,
+  "3-urls",
+  "An S3 static website references images in another S3 bucket, but they do not display. Which listed issue could affect cross-origin JavaScript access?",
+  [
+    "CORS has not been enabled on the assets bucket.",
+    "Cross-Region Replication has not been enabled.",
+    "S3 does not support object sharing between buckets.",
+    "The S3 bucket security group lacks inbound port 80.",
+  ],
+  [1],
+  "CORS can prevent browser JavaScript from reading cross-origin resources. CRR is replication, and buckets do not have EC2 security groups. M03 slide 33.",
+  {
+    correction:
+      "Original wording merely says images do not display. That alone is insufficient to diagnose CORS: ordinary <img> embedding often needs no CORS. Practice wording specifies JavaScript access.",
+  },
+);
+q(
+  4,
+  "4-shared",
+  "Which options are the AWS customer responsible for under the shared responsibility model? (Select TWO.)",
+  [
+    "Security group configuration",
+    "Physical servers",
+    "Client-side data",
+    "Edge-location infrastructure",
+    "Availability Zone security",
+  ],
+  [1, 3],
+  "Customers manage their data and security-group configuration. AWS secures physical infrastructure and facilities. M04 slides 7–12.",
+);
+q(
+  4,
+  "4-policy",
+  "Which IAM resource explicitly grants or denies permissions to a user or group?",
+  ["IAM roles", "IAM users", "IAM groups", "IAM policies"],
+  [4],
+  "Policies contain the permission statements evaluated for the request. Users, groups and roles are identities or identity collections. M04 slides 27–32.",
+);
+q(
+  4,
+  "4-auth",
+  "What is the process of verifying a user’s identity called?",
+  ["Endorsement", "Authentication", "Confirmation", "Authorization"],
+  [2],
+  "Authentication establishes identity; authorization determines permitted actions. M04 slide 15.",
+);
+q(
+  4,
+  "4-auth",
+  "Which statements about IAM user authentication are true in the card’s AWS-account context? (Select TWO.)",
+  [
+    "Provide AWS credentials to authenticate to supported services.",
+    "Provide a username and password to authenticate to the console.",
+    "Use a .pem or .ppk file to authenticate programmatically to the AWS API.",
+    "Use account root credentials for routine AWS CLI authentication.",
+    "Each AWS account can have only one administrator.",
+  ],
+  [1, 2],
+  "IAM user console sign-in uses a username/password and API requests use appropriate AWS credentials. SSH keys are not AWS API keys, root use is not routine best practice, and multiple administrators are possible. M04 slides 19–25.",
+);
+q(
+  4,
+  "4-roles",
+  "What does AWS recommend for credentials used by applications on EC2 instances?",
+  [
+    "Embed credentials in SDK client code.",
+    "Store long-lived credentials in local configuration files.",
+    "Create an IAM role and attach it to the EC2 instance.",
+    "Create an IAM user and attach it to the EC2 instance.",
+  ],
+  [3],
+  "An instance role provides temporary credentials without embedding long-lived keys. IAM users are not attached as instance roles. M04 slides 21, 25, 47–49.",
+);
+q(
+  4,
+  "4-policy",
+  "What format is used by IAM policies defining allowable API calls?",
+  ["YAML", "SAML", "CSV", "JSON"],
+  [4],
+  "IAM policies are JSON documents. YAML is often used in infrastructure templates; SAML is a federation format, and CSV is tabular data. M04 slides 30–35.",
+);
+q(
+  4,
+  "4-policy",
+  "An IAM policy attached to a managers group allows S3 reads and writes in the same account. What type of policy is it?",
+  [
+    "Identity-based",
+    "Resource-based",
+    "Cross-account access",
+    "AdministratorAccess managed",
+  ],
+  [1],
+  "The attachment to an IAM group makes it identity-based. A bucket policy would be resource-based. The stated permission does not imply AdministratorAccess. M04 slide 29.",
+);
+q(
+  4,
+  "4-eval",
+  "Which statement reflects best practices when granting permissions?",
+  [
+    "Start with broad access and limit it later.",
+    "Use root for routine administration.",
+    "Create policies following least privilege.",
+    "Do not set policies for individual resources.",
+  ],
+  [3],
+  "Grant the minimum required actions and resources, then add only justified permissions. M04 slide 36.",
+);
+q(
+  4,
+  "4-eval",
+  'What is the intended effect of a statement with Effect: Deny, Action: ["dynamodb:*", "s3:*"], and NotResource listing the pollynotes table and selected S3 resources?',
+  [
+    "Deny those actions on DynamoDB/S3 resources except those listed in NotResource.",
+    "Deny those actions only on the listed resources.",
+    "Deny writing to the listed pollynotes table.",
+    "Deny reading the listed polly-notes-web bucket.",
+  ],
+  [1],
+  "NotResource selects resources outside the list. This deny does not grant permissions to listed exceptions. M04 slides 34–35.",
+  {
+    correction:
+      "The source contains malformed Action strings (“dynamodb:” and “s#:”). Practice restores the lecture’s intended dynamodb:* and s3:* values; the original key is unchanged.",
+  },
+);
+q(
+  4,
+  "4-eval",
+  "Which statements are true about IAM policy evaluation? (Select TWO.)",
+  [
+    "A policy cannot include both deny and allow statements.",
+    "An explicit allow overrides an explicit deny.",
+    "An explicit deny overrides an explicit allow.",
+    "By default, requests are denied.",
+    "By default, requests are allowed.",
+  ],
+  [3, 4],
+  "The default is implicit deny; any applicable explicit deny wins over an allow. M04 slides 33–35, 57.",
+);
+q(
+  5,
+  "5-options",
+  "Which statement best describes DynamoDB?",
+  [
+    "An in-memory data store that boosts database performance",
+    "A graph database optimized for billions of relationships",
+    "A relational database compatible with MySQL and PostgreSQL",
+    "A key-value and document database that scales horizontally",
+  ],
+  [4],
+  "DynamoDB is key-value/document storage. The other descriptions correspond to cache, graph and relational services. M05 slides 8–19.",
+);
+q(
+  5,
+  "5-keys",
+  "Which component is part of a DynamoDB table?",
+  ["Predefined schema", "SQL-based queries", "Attributes", "Columns"],
+  [3],
+  "The lecture uses tables, items and attributes. A table specifies its key schema but does not require a fixed schema for all non-key attributes. M05 slides 16–19.",
+);
+q(
+  5,
+  "5-keys",
+  "SensorReadings has SensorId as partition key and timestamp as sort key. Which statement is true?",
+  [
+    "The pair is a simple primary key.",
+    "Two items cannot have the same partition key.",
+    "Two items cannot have the same sort key.",
+    "Two items cannot have the same complete primary key.",
+  ],
+  [4],
+  "The composite pair must be unique. Partition or sort values individually can repeat. M05 slide 17.",
+);
+q(
+  5,
+  "5-partitions",
+  "Which statement about DynamoDB partitions is true?",
+  [
+    "DynamoDB chooses the partition based on the range attribute.",
+    "With a simple key, DynamoDB stores and retrieves an item based on its hash attribute.",
+    "With a composite key, items are sorted before partition selection.",
+    "The developer writes DynamoDB’s hash function.",
+  ],
+  [2],
+  "The partition/hash-key value is input to DynamoDB’s own hash function. The sort key orders data within a key grouping. M05 slides 21–24.",
+);
+q(
+  5,
+  "5-index",
+  "A restaurants table is queried by name (partition key) and location (sort key). How can it also be queried by cuisine and average customer rating?",
+  [
+    "Create an LSI on cuisine and rating.",
+    "Create a GSI on cuisine and rating.",
+    "Change the existing table primary key in place to cuisine and rating.",
+    "Query cuisine and rating without an index.",
+  ],
+  [2],
+  "A GSI provides a new partition key and sort key. An LSI retains name as the partition key; an ordinary Query cannot use arbitrary non-key fields. M05 slides 26–29.",
+  {
+    originalAnswer: "?? either 2 or 5",
+    correction:
+      "The source answer is unresolved and mentions a nonexistent option 5. Corrected to option 2, a GSI, from M05 slides 26–29.",
+  },
+);
+q(
+  5,
+  "5-consistency",
+  "A game purchase requires multiple profile updates as one all-or-nothing user action. What is the best approach?",
+  [
+    "Add a DAX cache.",
+    "Implement global tables.",
+    "Write custom checking and rollback code for separate writes.",
+    "Use DynamoDB transactions.",
+  ],
+  [4],
+  "Transactions supply coordinated atomic changes. Caching and replication do not provide this multi-item atomic operation. M05 slides 32, 62.",
+);
+q(
+  5,
+  "5-streams",
+  "Which scenarios are uses for DynamoDB Streams? (Select TWO.)",
+  [
+    "Fastest possible reads for real-time bidding",
+    "Repeated reads of regional weather data for a long analysis",
+    "Notify friends when a new picture is uploaded",
+    "Monitor table changes and act when a value crosses a threshold",
+    "Provide an in-memory data store",
+  ],
+  [3, 4],
+  "Streams emits changes that consumers can act on. It is not a read cache or general in-memory datastore. M05 slides 42, 47, 79.",
+);
+q(
+  5,
+  "5-streams",
+  "Which statement about global tables is true?",
+  [
+    "They replicate within only one Region.",
+    "They use S3 to propagate changes between replicas.",
+    "DynamoDB creates replicas and propagates changes to the specified Regions.",
+    "They support partial replication of selected table items.",
+  ],
+  [3],
+  "The course describes managed replication of the table across Regions. S3 is not the replication mechanism. M05 slides 43–47.",
+);
+q(
+  5,
+  "5-backup",
+  "What is the maximum recovery history for a DynamoDB table with point-in-time recovery enabled?",
+  [
+    "The last week",
+    "The last 10 days",
+    "The last 35 days",
+    "The last calendar month",
+  ],
+  [3],
+  "PITR supports up to 35 days, limited by the configured recovery period and available history. It does not provide history from before it was enabled. Source: Quizlet M05 card 9; lecture introduces PITR at slides 49, 84.",
+);
+q(
+  5,
+  "5-crud",
+  "Which statement describes DynamoDB API control operations?",
+  [
+    "Create and manage DynamoDB tables.",
+    "Create, read, update and delete data in a table.",
+    "Get and write batches of items.",
+    "Make coordinated all-or-nothing changes across items.",
+  ],
+  [1],
+  "Control operations manage tables; the alternatives describe data, batch and transaction operations. M05 slide 51.",
+);
+q(
+  6,
+  "6-api",
+  "What phrase best describes a RESTful API?",
+  [
+    "An API using HTTP between client and server",
+    "A proxy handling common API application problems",
+    "An API following Representational State Transfer principles",
+    "An API residing on a web server",
+  ],
+  [3],
+  "REST is an architectural style. HTTP use or server location alone does not prove adherence to REST principles. M06 slide 11.",
+);
+q(
+  6,
+  "6-api",
+  "Which option suggests using WebSocket APIs?",
+  [
+    "Returning an order number after submitting an order",
+    "Sending a batch of orders to fulfillment",
+    "A real-time customer-support chat",
+    "Serving static daily reports to phones",
+  ],
+  [3],
+  "Chat benefits from a persistent bidirectional connection. The other scenarios can use ordinary requests or batch processing. M06 slides 16, 20–21.",
+);
+q(
+  6,
+  "6-types",
+  "Which use case suggests API Gateway HTTP APIs?",
+  [
+    "A simple API proxy in front of Lambda",
+    "VTL response transformation before returning Lambda results",
+    "Mock endpoints for testing",
+    "Different API quotas for each client",
+  ],
+  [1],
+  "HTTP APIs suit simple proxies. The course’s advanced mapping, mock and usage-plan scenarios select REST APIs. M06 slide 18.",
+);
+q(
+  6,
+  "6-endpoints",
+  "Which statement about API Gateway integrations is true?",
+  [
+    "First-class integration connects an HTTP API route to an external third-party service API.",
+    "HTTP proxy integration can direct a route to an internet resource.",
+    "API Gateway cannot access VPC resources.",
+    "An integration request is always different from the client’s method request.",
+  ],
+  [2],
+  "HTTP proxy integration forwards to a reachable HTTP backend. First-class integrations target supported AWS actions; VPC links reach private resources. Passthrough requests need not be transformed. M06 slides 45–53.",
+);
+q(
+  6,
+  "6-mapping",
+  "A client sends given name, surname, business phone and cellphone. The backend stores name and mobile phone. Which option requires the fewest application changes?",
+  [
+    "Export the API definition and update the client.",
+    "Use a mapping template to transform the request.",
+    "Create a usage plan describing the fields.",
+    "Use a first-class integration to connect the client to the database.",
+  ],
+  [2],
+  "A mapping template can combine names and select/rename fields. Usage plans govern consumption, not payload shape. M06 slides 42–44.",
+);
+q(
+  6,
+  "6-routes",
+  "Which elements are part of the base URI AWS generates for the lecture’s API Gateway API?",
+  [
+    "Region and stage name",
+    "API identifier and version",
+    "Account ID and stage name",
+    "Region and version",
+  ],
+  [1],
+  "The REST invoke URL contains API ID, Region and stage. Account ID and a separate version field are not required URI elements. M06 slide 25.",
+);
+q(
+  6,
+  "6-routes",
+  "In aws apigatewayv2 create-route, which option creates a route that returns an individual product from an online catalog?",
+  [
+    "route-key 'GET /products/{product_id}'",
+    "route-key 'PUT /products'",
+    "route-selection-expression '$GET/product'",
+    "route-selection-expression 'PUT /products/{proxy+}'",
+  ],
+  [1],
+  "GET retrieves a resource, and product_id identifies the desired item. PUT writes; route-selection-expression is not the HTTP route-key option. M06 slides 27–30.",
+  {
+    correction:
+      "Original snippet misspells target and shows a Lambda ARN directly. The lesson preserves the route-key answer; executable CLI examples use integrations/INTEGRATION_ID.",
+  },
+);
+q(
+  6,
+  "6-stage",
+  "Which statement about API Gateway stages is true?",
+  [
+    "Stage names are sequentially assigned from API versions.",
+    "Any stage on any API type can autodeploy.",
+    "Stage variables can connect different stages to different backends.",
+    "Avoid creating separate stages for development environments.",
+  ],
+  [3],
+  "Developers name stages and can set backend-specific variables. Auto-deployment support differs by API type. M06 slides 55–60.",
+);
+q(
+  6,
+  "6-protect",
+  "A team wants to protect APIs against SQL injection and cross-site scripting. Which solution most directly addresses this?",
+  [
+    "Set method throttling limits.",
+    "Make every API endpoint private.",
+    "Configure a JWT authorizer.",
+    "Use AWS WAF with API Gateway.",
+  ],
+  [4],
+  "WAF examines requests for exploit patterns. Throttling limits rates, private endpoints restrict reachability and authorizers validate callers. M06 slide 66.",
+);
+q(
+  6,
+  "6-monitor",
+  "What does the API Gateway IntegrationLatency metric tell you?",
+  [
+    "Frequency of server errors affecting latency",
+    "End-to-end API response speed to the client",
+    "Responsiveness of the backend",
+    "How often requests are throttled",
+  ],
+  [3],
+  "IntegrationLatency measures the backend request/response interval. Latency includes the wider API Gateway processing interval. M06 slides 81, 137.",
+);
 export const originalCards = cards;
-

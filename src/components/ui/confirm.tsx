@@ -1,3 +1,42 @@
-import * as Dialog from '@radix-ui/react-dialog';
-import { Button } from './button';
-export function Confirm({open,onOpenChange,title,description,onConfirm,label='Confirm'}:{open:boolean;onOpenChange:(b:boolean)=>void;title:string;description:string;onConfirm:()=>void;label?:string}){return <Dialog.Root open={open} onOpenChange={onOpenChange}><Dialog.Portal><Dialog.Overlay className="dialog-overlay"/><Dialog.Content className="dialog"><Dialog.Title>{title}</Dialog.Title><Dialog.Description>{description}</Dialog.Description><div className="actions"><Dialog.Close asChild><Button variant="outline">Cancel</Button></Dialog.Close><Button onClick={()=>{onConfirm();onOpenChange(false)}}>{label}</Button></div></Dialog.Content></Dialog.Portal></Dialog.Root>}
+import * as Dialog from "@radix-ui/react-dialog";
+import { Button } from "./button";
+export function Confirm({
+  open,
+  onOpenChange,
+  title,
+  description,
+  onConfirm,
+  label = "Confirm",
+}: {
+  open: boolean;
+  onOpenChange: (b: boolean) => void;
+  title: string;
+  description: string;
+  onConfirm: () => void;
+  label?: string;
+}) {
+  return (
+    <Dialog.Root open={open} onOpenChange={onOpenChange}>
+      <Dialog.Portal>
+        <Dialog.Overlay className="dialog-overlay" />
+        <Dialog.Content className="dialog">
+          <Dialog.Title>{title}</Dialog.Title>
+          <Dialog.Description>{description}</Dialog.Description>
+          <div className="actions">
+            <Dialog.Close asChild>
+              <Button variant="outline">Cancel</Button>
+            </Dialog.Close>
+            <Button
+              onClick={() => {
+                onConfirm();
+                onOpenChange(false);
+              }}
+            >
+              {label}
+            </Button>
+          </div>
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
+  );
+}

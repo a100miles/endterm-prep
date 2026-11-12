@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-12T00:00:00Z",
+  "title": "Design System: Endterm Prep",
+  "extensions": {
+    "colorMeta": {
+      "accent": { "role": "primary", "displayName": "Deep Green" },
+      "tint": { "role": "primary", "displayName": "Pale Sage" },
+      "bg": { "role": "neutral", "displayName": "Warm Paper" },
+      "panel": { "role": "neutral", "displayName": "Near-white Paper" },
+      "text": { "role": "neutral", "displayName": "Charcoal" },
+      "warn": { "role": "secondary", "displayName": "Amber Caution" },
+      "error": { "role": "secondary", "displayName": "Answer Red" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Page Heading", "purpose": "Responsive primary page heading; mobile overrides to 32px." },
+      "lesson": { "displayName": "Lesson Reading", "purpose": "Long explanations limited to 72ch." },
+      "code": { "displayName": "Technical Mono", "purpose": "Preformatted code; timer uses the same family at 17px." }
+    },
+    "shadows": [
+      { "name": "dialog", "value": "0 20px 70px #0003", "purpose": "Confirmation dialog only; cards remain flat." }
+    ],
+    "motion": [
+      { "name": "button", "value": "background .15s, border-color .15s", "purpose": "Control hover feedback." },
+      { "name": "progress", "value": "width .3s ease-out", "purpose": "Progress meter updates." },
+      { "name": "flashcard", "value": "transform .45s cubic-bezier(.16,1,.3,1)", "purpose": "Rotate the flashcard between prompt and answer." },
+      { "name": "drawer", "value": "transform .2s", "purpose": "Mobile navigation opening." },
+      { "name": "reduced-motion", "value": "animation:none!important;transition:none!important;scroll-behavior:auto!important", "purpose": "Applied globally under prefers-reduced-motion:reduce." }
+    ],
+    "breakpoints": [
+      { "name": "mobile-max", "value": "640px" },
+      { "name": "stack-max", "value": "850px" },
+      { "name": "compact-max", "value": "1200px" },
+      { "name": "wide-min", "value": "1600px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main study action with a visible keyboard focus ring.",
+      "html": "<button class=\"ds-primary\">Continue studying</button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Manrope Variable',sans-serif;font-size:13px;font-weight:600;line-height:1.4;padding:11px 17px;min-height:44px;border:1px solid transparent;border-radius:8px;background:var(--accent,#236454);color:var(--panel,#fffefa);cursor:pointer;transition:background .15s,border-color .15s}.ds-primary:hover{filter:brightness(.94)}.ds-primary:focus-visible{outline:3px solid var(--accent,#236454);outline-offset:4px}.ds-primary:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none!important}}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action with tinted hover feedback.",
+      "html": "<button class=\"ds-outline\">Practice questions</button>",
+      "css": ".ds-outline{font-family:'Manrope Variable',sans-serif;font-size:13px;font-weight:600;line-height:1.4;padding:11px 17px;min-height:44px;border:1px solid var(--line,#dedfd7);border-radius:8px;background:transparent;color:var(--text,#252b29);cursor:pointer;transition:background .15s,border-color .15s}.ds-outline:hover{background:var(--tint,#e7eee8);border-color:var(--accent,#236454)}.ds-outline:focus-visible{outline:3px solid var(--accent,#236454);outline-offset:4px}.ds-outline:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-outline{transition:none!important}}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Quiet supporting action.",
+      "html": "<button class=\"ds-ghost\">Back to modules</button>",
+      "css": ".ds-ghost{font-family:'Manrope Variable',sans-serif;font-size:13px;font-weight:600;line-height:1.4;padding:11px 17px;min-height:44px;border:1px solid transparent;border-radius:8px;background:transparent;color:var(--muted,#646a66);cursor:pointer;transition:background .15s,border-color .15s}.ds-ghost:hover{background:var(--tint,#e7eee8);color:var(--text,#252b29)}.ds-ghost:focus-visible{outline:3px solid var(--accent,#236454);outline-offset:4px}.ds-ghost:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-ghost{transition:none!important}}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Readable full-width answer entry with the shared focus treatment.",
+      "html": "<label class=\"ds-label\">Your answer<input class=\"ds-input\" placeholder=\"Type your answer\" /></label>",
+      "css": ".ds-label{display:block;font-family:'Manrope Variable',sans-serif;font-size:13px;font-weight:600;color:var(--text,#252b29)}.ds-input{display:block;margin-top:6px;width:100%;font:inherit;border:1px solid var(--line,#dedfd7);background:var(--panel,#fffefa);color:var(--text,#252b29);border-radius:8px;padding:11px 12px;min-height:44px;caret-color:var(--accent,#236454)}.ds-input:focus-visible{outline:3px solid var(--accent,#236454);outline-offset:4px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Dark rail navigation with explicit active and hover states.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Study\"><a href=\"#overview\" class=\"ds-link ds-active\" aria-current=\"page\">Overview</a><a href=\"#learn\" class=\"ds-link\">Learn</a></nav>",
+      "css": ".ds-nav{display:grid;gap:6px;padding:19px;background:#232e28;font-family:'Manrope Variable',sans-serif}.ds-link{display:flex;gap:12px;padding:11px 14px;border-radius:7px;font-size:13px;color:#c8d2cb;text-decoration:none}.ds-link:hover{background:#303e35;color:white}.ds-link.ds-active{background:#415448;color:#fff}.ds-link:focus-visible{outline:3px solid var(--accent,#236454);outline-offset:4px}"
+    },
+    {
+      "name": "Module Card",
+      "kind": "card",
+      "refersTo": "module-card",
+      "description": "Flat bordered card for a study module.",
+      "html": "<article class=\"ds-card\"><h3>Study module</h3><p>Read explanations and practise recall.</p><a href=\"#module\">Open module →</a></article>",
+      "css": ".ds-card{font-family:'Manrope Variable',sans-serif;padding:22px;background:var(--panel,#fffefa);color:var(--text,#252b29);border:1px solid var(--line,#dedfd7);border-radius:13px;display:flex;flex-direction:column}.ds-card:hover{border-color:#8ba899}.ds-card h3{font-size:21px;font-weight:650;letter-spacing:-.015em;line-height:1.25;margin:0}.ds-card p{font-size:12px;line-height:1.75;color:var(--muted,#646a66);margin:10px 0 23px}.ds-card a{font-size:12px;font-weight:650;padding-top:16px;border-top:1px solid var(--line,#dedfd7);color:var(--accent,#236454);text-decoration:none}.ds-card a:hover{text-decoration:underline}.ds-card a:focus-visible{outline:3px solid var(--accent,#236454);outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Focused Study Workspace",
+    "overview": "Warm paper, dark typography and subtle green accents support sustained reading and recall. Rounded cards and familiar controls follow the user's minimal Linear/Notion/Quizlet direction. Content accuracy takes priority over decoration.\n\nThe implemented system is restrained and mostly flat. A dark navigation rail anchors the pale reading area; tonal panels distinguish examples, selected answers and progress. Dark mode preserves the same hierarchy with deep green surfaces and lighter foregrounds.",
+    "keyCharacteristics": [
+      "Warm neutral surfaces with muted green actions.",
+      "Readable sans-serif text and technical monospace.",
+      "Rounded, bordered cards with generous reading space.",
+      "Visible keyboard focus and reduced-motion support."
+    ],
+    "rules": [],
+    "dos": [
+      "Do reuse semantic theme variables for surfaces, text, borders and feedback.",
+      "Do preserve visible keyboard focus and reduced-motion behavior.",
+      "Do keep long explanations within the established reading width.",
+      "Do pair answer-state colors with the implemented textual feedback."
+    ],
+    "donts": [
+      "Don't apply dialog shadows to the flat card system.",
+      "Don't hide source cautions through low-contrast decorative styling.",
+      "Don't replace the established sans-serif and technical monospace pairing with decorative type."
+    ]
+  }
+}
