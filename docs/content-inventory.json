@@ -1,0 +1,600 @@
+[
+  {
+    "module": 1,
+    "name": "Welcome to cloud developing",
+    "file": "AcademyCloudDeveloping-EN-ILT-M01-intro (1).pptx",
+    "slides": 39,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "1-scope",
+        "title": "Course scope and prerequisites",
+        "slides": "4–19",
+        "terminology": [
+          "SDK",
+          "API",
+          "Git",
+          "SQL",
+          "NoSQL"
+        ]
+      },
+      {
+        "id": "1-cafe",
+        "title": "The café business case",
+        "slides": "20–25, 39",
+        "terminology": [
+          "S3",
+          "DynamoDB",
+          "API Gateway",
+          "Lambda",
+          "proof of concept"
+        ]
+      },
+      {
+        "id": "1-roles",
+        "title": "Roles and responsibilities",
+        "slides": "26–32",
+        "terminology": [
+          "DevOps",
+          "cloud architect",
+          "developer",
+          "IT leader"
+        ]
+      },
+      {
+        "id": "1-docs",
+        "title": "Finding dependable documentation",
+        "slides": "33–37",
+        "terminology": [
+          "developer guide",
+          "API reference",
+          "whitepaper"
+        ]
+      }
+    ],
+    "originalFlashcards": 0,
+    "additionalQuestions": 12,
+    "totalQuestions": 12,
+    "quizlet": null
+  },
+  {
+    "module": 2,
+    "name": "Developing on AWS",
+    "file": "AcademyCloudDeveloping-EN-ILT-M02-dev (1).pptx",
+    "slides": 61,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "2-sdlc",
+        "title": "Systems development lifecycle",
+        "slides": "7–11, 55",
+        "terminology": [
+          "SDLC",
+          "Waterfall",
+          "Agile",
+          "sprint"
+        ]
+      },
+      {
+        "id": "2-start",
+        "title": "Getting ready to develop",
+        "slides": "12–20, 56–58",
+        "terminology": [
+          "IDE",
+          "IAM",
+          "AWS CLI",
+          "AWS SAM",
+          "Amplify"
+        ]
+      },
+      {
+        "id": "2-cli",
+        "title": "AWS CLI and CloudShell",
+        "slides": "20–23, 32–36, 61",
+        "terminology": [
+          "CloudShell",
+          "command",
+          "subcommand",
+          "parameter"
+        ]
+      },
+      {
+        "id": "2-sdk",
+        "title": "Clients, resources and endpoints",
+        "slides": "24–28, 59–60",
+        "terminology": [
+          "Boto3",
+          "service client",
+          "resource API",
+          "endpoint"
+        ]
+      },
+      {
+        "id": "2-config",
+        "title": "Regions, profiles and exceptions",
+        "slides": "29–31",
+        "terminology": [
+          "region_name",
+          "ClientError",
+          "HTTP 4xx",
+          "HTTP 5xx",
+          "request ID"
+        ]
+      },
+      {
+        "id": "2-q",
+        "title": "Amazon Q Developer and validation",
+        "slides": "37–44, 48–50",
+        "terminology": [
+          "Amazon Q Developer",
+          "code review",
+          "unit test",
+          "security scan"
+        ]
+      }
+    ],
+    "originalFlashcards": 10,
+    "additionalQuestions": 14,
+    "totalQuestions": 24,
+    "quizlet": {
+      "url": "https://quizlet.com/ca/704589033/aws-module-2-knowledge-check-flash-cards/",
+      "status": "All 10 cards read in Chrome, 2026-11-12",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 3,
+    "name": "Storage with Amazon S3",
+    "file": "AcademyCloudDeveloping-EN-ILT-M03-S3.pptx",
+    "slides": 54,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "3-basics",
+        "title": "Object storage and use cases",
+        "slides": "5–11, 47",
+        "terminology": [
+          "bucket",
+          "object",
+          "key",
+          "durability",
+          "data lake"
+        ]
+      },
+      {
+        "id": "3-buckets",
+        "title": "Bucket names, Regions and URLs",
+        "slides": "12–17, 48",
+        "terminology": [
+          "virtual-hosted URL",
+          "Region",
+          "namespace"
+        ]
+      },
+      {
+        "id": "3-objects",
+        "title": "Keys, prefixes and metadata",
+        "slides": "16, 19–22",
+        "terminology": [
+          "prefix",
+          "metadata",
+          "Content-Type",
+          "GET",
+          "PUT"
+        ]
+      },
+      {
+        "id": "3-upload",
+        "title": "Single PUT and multipart upload",
+        "slides": "20–21",
+        "terminology": [
+          "multipart",
+          "part",
+          "throughput"
+        ]
+      },
+      {
+        "id": "3-version",
+        "title": "Versioning and deletion",
+        "slides": "23–26, 42–44, 50–51",
+        "terminology": [
+          "version ID",
+          "delete marker",
+          "Object Lock"
+        ]
+      },
+      {
+        "id": "3-security",
+        "title": "Encryption and access policies",
+        "slides": "27–31, 52–53",
+        "terminology": [
+          "TLS",
+          "SSE-S3",
+          "SSE-KMS",
+          "SSE-C",
+          "bucket policy",
+          "ACL"
+        ]
+      },
+      {
+        "id": "3-urls",
+        "title": "Presigned URLs, CORS and the lab",
+        "slides": "32–38, 54",
+        "terminology": [
+          "presigned URL",
+          "expiration",
+          "CORS",
+          "origin"
+        ]
+      }
+    ],
+    "originalFlashcards": 10,
+    "additionalQuestions": 15,
+    "totalQuestions": 25,
+    "quizlet": {
+      "url": "https://quizlet.com/875909579/aws-module-3-knowledge-check-flash-cards/",
+      "status": "All 10 cards read in Chrome, 2026-11-12",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 4,
+    "name": "Securing cloud resources",
+    "file": "AcademyCloudDeveloping-EN-ILT-M04-IAM.pptx",
+    "slides": 64,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "4-shared",
+        "title": "Shared responsibility",
+        "slides": "5–12, 53",
+        "terminology": [
+          "shared responsibility",
+          "guest OS",
+          "security group"
+        ]
+      },
+      {
+        "id": "4-auth",
+        "title": "Authentication, authorization and MFA",
+        "slides": "13–20, 54–55",
+        "terminology": [
+          "principal",
+          "authentication",
+          "authorization",
+          "MFA"
+        ]
+      },
+      {
+        "id": "4-roles",
+        "title": "Users, groups, roles and credentials",
+        "slides": "21–25, 56, 58–64",
+        "terminology": [
+          "IAM role",
+          "temporary credentials",
+          "profile",
+          "trust policy"
+        ]
+      },
+      {
+        "id": "4-policy",
+        "title": "Policy structure and attachment",
+        "slides": "26–32",
+        "terminology": [
+          "Effect",
+          "Action",
+          "Resource",
+          "Principal",
+          "managed policy",
+          "inline policy"
+        ]
+      },
+      {
+        "id": "4-eval",
+        "title": "Evaluation, explicit deny and least privilege",
+        "slides": "33–43, 47–49, 57",
+        "terminology": [
+          "implicit deny",
+          "explicit deny",
+          "NotResource",
+          "least privilege"
+        ]
+      }
+    ],
+    "originalFlashcards": 10,
+    "additionalQuestions": 13,
+    "totalQuestions": 23,
+    "quizlet": {
+      "url": "https://quizlet.com/877920643/aws-developer-module-4-knowledge-check-flash-cards/",
+      "status": "All 10 cards read in Chrome, 2026-11-12",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 5,
+    "name": "Flexible NoSQL with DynamoDB",
+    "file": "AcademyCloudDeveloping-EN-ILT-M05-DynamoDB.pptx",
+    "slides": 84,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "5-options",
+        "title": "Choosing a database",
+        "slides": "5–14",
+        "terminology": [
+          "RDS",
+          "Aurora",
+          "DynamoDB",
+          "ElastiCache",
+          "Neptune"
+        ]
+      },
+      {
+        "id": "5-keys",
+        "title": "Tables, items and keys",
+        "slides": "15–19, 77",
+        "terminology": [
+          "table",
+          "item",
+          "attribute",
+          "partition key",
+          "sort key",
+          "map",
+          "list"
+        ]
+      },
+      {
+        "id": "5-partitions",
+        "title": "Partitions and access patterns",
+        "slides": "20–24",
+        "terminology": [
+          "hash key",
+          "range key",
+          "partition",
+          "hot key"
+        ]
+      },
+      {
+        "id": "5-index",
+        "title": "Global and local secondary indexes",
+        "slides": "25–29",
+        "terminology": [
+          "GSI",
+          "LSI",
+          "projection"
+        ]
+      },
+      {
+        "id": "5-consistency",
+        "title": "Read consistency and transactions",
+        "slides": "30–32, 40, 62",
+        "terminology": [
+          "eventual consistency",
+          "strong consistency",
+          "ACID",
+          "transaction"
+        ]
+      },
+      {
+        "id": "5-capacity",
+        "title": "Read and write capacity calculations",
+        "slides": "33–40, 78",
+        "terminology": [
+          "RCU",
+          "WCU",
+          "provisioned",
+          "on-demand"
+        ]
+      },
+      {
+        "id": "5-streams",
+        "title": "Streams and global tables",
+        "slides": "41–47, 71–73, 79–83",
+        "terminology": [
+          "stream record",
+          "shard",
+          "replica",
+          "last writer wins",
+          "MREC",
+          "MRSC"
+        ]
+      },
+      {
+        "id": "5-backup",
+        "title": "Backups and recovery",
+        "slides": "48–49, 84",
+        "terminology": [
+          "on-demand backup",
+          "PITR",
+          "restore"
+        ]
+      },
+      {
+        "id": "5-crud",
+        "title": "Control, data and conditional operations",
+        "slides": "50–57, 63–67",
+        "terminology": [
+          "CreateTable",
+          "PutItem",
+          "UpdateItem",
+          "DeleteItem",
+          "GetItem",
+          "ConditionExpression"
+        ]
+      },
+      {
+        "id": "5-query",
+        "title": "Query, Scan, pagination and batches",
+        "slides": "58–62",
+        "terminology": [
+          "Query",
+          "Scan",
+          "FilterExpression",
+          "LastEvaluatedKey",
+          "ExclusiveStartKey",
+          "BatchWriteItem"
+        ]
+      }
+    ],
+    "originalFlashcards": 10,
+    "additionalQuestions": 27,
+    "totalQuestions": 37,
+    "quizlet": {
+      "url": "https://quizlet.com/877926687/aws-developer-module-5-knowledge-check-flash-cards/",
+      "status": "All 10 cards read in Chrome, 2026-11-12",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 6,
+    "name": "REST APIs with API Gateway",
+    "file": "AcademyCloudDeveloping-EN-ILT-M06-APIGateway.pptx",
+    "slides": 139,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "6-api",
+        "title": "APIs, REST and WebSockets",
+        "slides": "5–23, 104–111",
+        "terminology": [
+          "API",
+          "REST",
+          "WebSocket",
+          "proxy",
+          "stateless"
+        ]
+      },
+      {
+        "id": "6-types",
+        "title": "REST APIs versus HTTP APIs",
+        "slides": "18, 22, 109, 114",
+        "terminology": [
+          "REST API",
+          "HTTP API",
+          "OpenAPI",
+          "SAM",
+          "CloudFormation",
+          "CDK"
+        ]
+      },
+      {
+        "id": "6-routes",
+        "title": "Resources, methods and routes",
+        "slides": "24–33, 112–113",
+        "terminology": [
+          "GET",
+          "PUT",
+          "POST",
+          "route-key",
+          "proxy+",
+          "OpenAPI"
+        ]
+      },
+      {
+        "id": "6-endpoints",
+        "title": "Endpoint types and private integration",
+        "slides": "35–38, 47–49, 114–117, 121–122",
+        "terminology": [
+          "Regional",
+          "edge-optimized",
+          "private endpoint",
+          "VPC link"
+        ]
+      },
+      {
+        "id": "6-mapping",
+        "title": "Proxy, non-proxy and mock integrations",
+        "slides": "37–46, 50–53, 116–120, 123",
+        "terminology": [
+          "Lambda proxy",
+          "mapping template",
+          "VTL",
+          "mock",
+          "first-class integration"
+        ]
+      },
+      {
+        "id": "6-stage",
+        "title": "Deployments, stages and canaries",
+        "slides": "54–60, 97–99, 124–125",
+        "terminology": [
+          "deployment",
+          "stage",
+          "stage variable",
+          "canary",
+          "alias"
+        ]
+      },
+      {
+        "id": "6-protect",
+        "title": "Resource policies, certificates and WAF",
+        "slides": "61–66, 126–127",
+        "terminology": [
+          "resource policy",
+          "ACM",
+          "client certificate",
+          "WAF",
+          "SQL injection",
+          "XSS"
+        ]
+      },
+      {
+        "id": "6-cors",
+        "title": "CORS and browser requests",
+        "slides": "67–69, 128–130",
+        "terminology": [
+          "same-origin policy",
+          "CORS",
+          "OPTIONS",
+          "preflight"
+        ]
+      },
+      {
+        "id": "6-throttle",
+        "title": "Throttling, usage plans and authorization",
+        "slides": "70–79, 131–136",
+        "terminology": [
+          "throttling",
+          "usage plan",
+          "API key",
+          "JWT",
+          "Cognito",
+          "Lambda authorizer"
+        ]
+      },
+      {
+        "id": "6-monitor",
+        "title": "Monitoring, caching and compression",
+        "slides": "80–87, 137–138",
+        "terminology": [
+          "Latency",
+          "IntegrationLatency",
+          "CloudWatch",
+          "X-Ray",
+          "CloudTrail",
+          "Config",
+          "cache",
+          "gzip"
+        ]
+      },
+      {
+        "id": "6-lab",
+        "title": "Putting the café API together",
+        "slides": "88–93, 139",
+        "terminology": [
+          "mock endpoint",
+          "FoodProducts",
+          "create_report"
+        ]
+      }
+    ],
+    "originalFlashcards": 10,
+    "additionalQuestions": 27,
+    "totalQuestions": 37,
+    "quizlet": {
+      "url": "https://quizlet.com/883769808/aws-module-6-knowledge-check-flash-cards/",
+      "status": "All 10 cards read in Chrome, 2026-11-12",
+      "duplicates": 0
+    }
+  }
+]

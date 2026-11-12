@@ -1,0 +1,4306 @@
+[
+  {
+    "module": 1,
+    "slide": 1,
+    "title": "Module 1: Welcome to AWS Academy Cloud Developing",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 1,
+    "slide": 2,
+    "title": "Module overview",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 1,
+    "slide": 3,
+    "title": "Section 1: Course objectives and overview",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 1,
+    "slide": 4,
+    "title": "Course prerequisites",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 5,
+    "title": "Course objectives",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 6,
+    "title": "Course outline",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 7,
+    "title": "Module 2: Introduction to Developing on AWS",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 8,
+    "title": "Module 3: Developing Storage Solutions",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 9,
+    "title": "Module 4: Securing Access to Cloud Resources",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 10,
+    "title": "Module 5: Developing Flexible NoSQL Solutions",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 11,
+    "title": "Module 6: Developing REST APIs",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 12,
+    "title": "Module 7: Developing Event-Driven Serverless Solutions",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 13,
+    "title": "Module 8: Introducing Containers and Container Services",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 14,
+    "title": "Module 9: Caching Information for Scalability",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 15,
+    "title": "Module 10: Developing with Messaging Services",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 16,
+    "title": "Module 11: Defining Workflows to Orchestrate Functions",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 17,
+    "title": "Module 12: Developing Secure Applications on AWS",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 18,
+    "title": "Module 13: Automating Deployment Using CI/CD Pipelines",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 19,
+    "title": "Module 14: Bridging to Certification",
+    "topics": [
+      "1-scope"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 20,
+    "title": "Section 2: Café business case introduction",
+    "topics": [
+      "1-cafe"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 21,
+    "title": "Café and bakery",
+    "topics": [
+      "1-cafe"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 22,
+    "title": "Café owners and staff",
+    "topics": [
+      "1-cafe"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 23,
+    "title": "AWS consultants, café visitors",
+    "topics": [
+      "1-cafe"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 24,
+    "title": "You will build solutions for the café in the labs in this course",
+    "topics": [
+      "1-cafe"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 25,
+    "title": "The café application that you will build",
+    "topics": [
+      "1-cafe"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 26,
+    "title": "Section 3: Roles in cloud computing",
+    "topics": [
+      "1-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 27,
+    "title": "Roles in cloud computing: IT professional",
+    "topics": [
+      "1-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 28,
+    "title": "Roles in cloud computing: IT leader",
+    "topics": [
+      "1-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 29,
+    "title": "Roles in cloud computing: DevOps engineer",
+    "topics": [
+      "1-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 30,
+    "title": "Roles in cloud computing: Cloud architect",
+    "topics": [
+      "1-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 31,
+    "title": "Roles in cloud computing: Developer",
+    "topics": [
+      "1-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 32,
+    "title": "AWS Certification exams",
+    "topics": [
+      "1-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 33,
+    "title": "Activity: AWS Documentation Scavenger Hunt",
+    "topics": [
+      "1-docs"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 34,
+    "title": "AWS Documentation Scavenger Hunt",
+    "topics": [
+      "1-docs"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 35,
+    "title": "Module wrap-up",
+    "topics": [
+      "1-docs"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 36,
+    "title": "Module summary",
+    "topics": [
+      "1-docs"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 37,
+    "title": "Thank you",
+    "topics": [
+      "1-docs"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 1,
+    "slide": 38,
+    "title": "Image source files for development use only.",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 1,
+    "slide": 39,
+    "title": "The café application that you will build ",
+    "topics": [
+      "1-cafe"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 1,
+    "title": "Module 2: Introduction to Developing on AWS",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 2,
+    "slide": 2,
+    "title": "Section 1: Introduction",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 2,
+    "slide": 3,
+    "title": "Module objectives",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 2,
+    "slide": 4,
+    "title": "Module overview",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 2,
+    "slide": 5,
+    "title": "Café business requirement",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Diagram, repeated source artwork or orientation; inspected in full-deck review"
+  },
+  {
+    "module": 2,
+    "slide": 6,
+    "title": "Cloud development tools as part of developing a cloud application",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Diagram, repeated source artwork or orientation; inspected in full-deck review"
+  },
+  {
+    "module": 2,
+    "slide": 7,
+    "title": "Section 2: Systems development lifecycle",
+    "topics": [
+      "2-sdlc"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 8,
+    "title": "The challenge of software delivery",
+    "topics": [
+      "2-sdlc"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 9,
+    "title": "Systems development lifecycle",
+    "topics": [
+      "2-sdlc"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 10,
+    "title": "SDLC methodologies",
+    "topics": [
+      "2-sdlc"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 11,
+    "title": "Major phases of software development",
+    "topics": [
+      "2-sdlc"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 12,
+    "title": "Section 3: Steps to get started developing on AWS",
+    "topics": [
+      "2-start"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 13,
+    "title": "How to get started developing on AWS",
+    "topics": [
+      "2-start"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 14,
+    "title": "Getting started: AWS account",
+    "topics": [
+      "2-start"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 15,
+    "title": "Getting started: Permissions",
+    "topics": [
+      "2-start"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 16,
+    "title": "IAM example",
+    "topics": [
+      "2-start"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 17,
+    "title": "Getting started: Development environment",
+    "topics": [
+      "2-start"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 18,
+    "title": "Getting started: AWS services",
+    "topics": [
+      "2-start"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 19,
+    "title": "Interacting with AWS services",
+    "topics": [
+      "2-start"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 20,
+    "title": "Command line tools",
+    "topics": [
+      "2-start",
+      "2-cli"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 21,
+    "title": "Demonstration: Installing the AWS CLI",
+    "topics": [
+      "2-cli"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 22,
+    "title": "AWS CLI: Command line format",
+    "topics": [
+      "2-cli"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 23,
+    "title": "AWS CloudShell",
+    "topics": [
+      "2-cli"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 24,
+    "title": "Section 4: Fundamentals of workingwith the AWS SDKs",
+    "topics": [
+      "2-sdk"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 25,
+    "title": "AWS SDKs",
+    "topics": [
+      "2-sdk"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 26,
+    "title": "Overview of developing applications with AWS SDKs",
+    "topics": [
+      "2-sdk"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 27,
+    "title": "Service client API",
+    "topics": [
+      "2-sdk"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 28,
+    "title": "Resource API",
+    "topics": [
+      "2-sdk"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 29,
+    "title": "Specifying AWS Regions",
+    "topics": [
+      "2-config"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 30,
+    "title": "Handling exceptions",
+    "topics": [
+      "2-config"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 31,
+    "title": "Exceptions",
+    "topics": [
+      "2-config"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 32,
+    "title": "Lab 2.1: Exploring AWS CloudShell and an IDE",
+    "topics": [
+      "2-cli"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 33,
+    "title": "Lab: Tasks",
+    "topics": [
+      "2-cli"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 34,
+    "title": "Lab: Final product",
+    "topics": [
+      "2-cli"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 35,
+    "title": "Begin Lab 2.1: Exploring AWS CloudShell and an IDE",
+    "topics": [
+      "2-cli"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 36,
+    "title": "Lab debrief: Key takeaways",
+    "topics": [
+      "2-cli"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 37,
+    "title": "Section 5: Introduction to Amazon Q Developer",
+    "topics": [
+      "2-q"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 38,
+    "title": "Amazon Q Developer",
+    "topics": [
+      "2-q"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 39,
+    "title": "Amazon Q Developer supports you across the software development lifecycle (SDLC)",
+    "topics": [
+      "2-q"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 40,
+    "title": "Example: Amazon Q Developer implements a new feature to a project – Prompt",
+    "topics": [
+      "2-q"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 41,
+    "title": "Example: Amazon Q Developer implements a new feature to a project – Plan",
+    "topics": [
+      "2-q"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 42,
+    "title": "Example: Amazon Q Developer implements a new feature to a project – Generate and review",
+    "topics": [
+      "2-q"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 43,
+    "title": "Example: Amazon Q Developer implements a new feature to a project – Insert code",
+    "topics": [
+      "2-q"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 44,
+    "title": "Example: Amazon Q Developer implements a new feature to a project – Test",
+    "topics": [
+      "2-q"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 45,
+    "title": "Module wrap-up",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 2,
+    "slide": 46,
+    "title": "Module summary",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 2,
+    "slide": 47,
+    "title": "Complete the knowledge check",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 2,
+    "slide": 48,
+    "title": "Sample exam question",
+    "topics": [
+      "2-q"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 49,
+    "title": "Sample exam question: Response choices",
+    "topics": [
+      "2-q"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 50,
+    "title": "Sample exam question: Answer",
+    "topics": [
+      "2-q"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 51,
+    "title": "Additional resources",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 2,
+    "slide": 52,
+    "title": "Thank you",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 2,
+    "slide": 53,
+    "title": "Image source files for development use only.",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 2,
+    "slide": 54,
+    "title": "Cloud development tools as part of developing a cloud application ",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Diagram, repeated source artwork or orientation; inspected in full-deck review"
+  },
+  {
+    "module": 2,
+    "slide": 55,
+    "title": "SDLC methodologies ",
+    "topics": [
+      "2-sdlc"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 56,
+    "title": "How to get started developing on AWS ",
+    "topics": [
+      "2-start"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 57,
+    "title": "IAM example",
+    "topics": [
+      "2-start"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 58,
+    "title": "Interacting with AWS services ",
+    "topics": [
+      "2-start"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 59,
+    "title": "AWS SDKs ",
+    "topics": [
+      "2-sdk"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 60,
+    "title": "Overview of developing applications with AWS SDKs",
+    "topics": [
+      "2-sdk"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 2,
+    "slide": 61,
+    "title": "Lab: Final product ",
+    "topics": [
+      "2-cli"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 1,
+    "title": "Module 3: Developing Storage Solutions",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 3,
+    "slide": 2,
+    "title": "Section 1: Introduction",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 3,
+    "slide": 3,
+    "title": "Module objectives",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 3,
+    "slide": 4,
+    "title": "Module overview",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 3,
+    "slide": 5,
+    "title": "Café business requirement",
+    "topics": [
+      "3-basics"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 6,
+    "title": "Amazon S3 as part of developing a cloud application",
+    "topics": [
+      "3-basics"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 7,
+    "title": "Section 2: Introducing Amazon S3",
+    "topics": [
+      "3-basics"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 8,
+    "title": "Amazon S3",
+    "topics": [
+      "3-basics"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 9,
+    "title": "Amazon S3 use cases",
+    "topics": [
+      "3-basics"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 10,
+    "title": "Amazon S3 components",
+    "topics": [
+      "3-basics"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 11,
+    "title": "Section 2 key takeaways",
+    "topics": [
+      "3-basics"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 12,
+    "title": "Section 3: Creating S3 buckets",
+    "topics": [
+      "3-buckets"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 13,
+    "title": "S3 bucket names",
+    "topics": [
+      "3-buckets"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 14,
+    "title": "Amazon S3 bucket Regions",
+    "topics": [
+      "3-buckets"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 15,
+    "title": "Accessing buckets: Bucket URLs",
+    "topics": [
+      "3-buckets"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 16,
+    "title": "Creating folder structure in buckets: Using prefixes",
+    "topics": [
+      "3-buckets",
+      "3-objects"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 17,
+    "title": "Section 3 key takeaways",
+    "topics": [
+      "3-buckets"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 18,
+    "title": "Section 4: Working with S3 objects",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 3,
+    "slide": 19,
+    "title": "Object metadata",
+    "topics": [
+      "3-objects"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 20,
+    "title": "PUT object",
+    "topics": [
+      "3-objects",
+      "3-upload"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 21,
+    "title": "PUT object: Code",
+    "topics": [
+      "3-objects",
+      "3-upload"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 22,
+    "title": "GET object",
+    "topics": [
+      "3-objects"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 23,
+    "title": "Versioning",
+    "topics": [
+      "3-version"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 24,
+    "title": "DELETE object: Versioning disabled",
+    "topics": [
+      "3-version"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 25,
+    "title": "DELETE object: Versioning enabled",
+    "topics": [
+      "3-version"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 26,
+    "title": "Section 4 key takeaways",
+    "topics": [
+      "3-version"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 27,
+    "title": "Section 5: Protecting data and managing access to Amazon S3 resources",
+    "topics": [
+      "3-security"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 28,
+    "title": "Data encryption",
+    "topics": [
+      "3-security"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 29,
+    "title": "Identity-based policies and resource-based policies",
+    "topics": [
+      "3-security"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 30,
+    "title": "Access control lists (ACLs) ",
+    "topics": [
+      "3-security"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 31,
+    "title": "Bucket policies",
+    "topics": [
+      "3-security"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 32,
+    "title": "Presigned URLs",
+    "topics": [
+      "3-urls"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 33,
+    "title": "Cross-origin resource sharing (CORS)",
+    "topics": [
+      "3-urls"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 34,
+    "title": "Section 5 key takeaways",
+    "topics": [
+      "3-urls"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 35,
+    "title": "Lab 3.1: Working with Amazon S3",
+    "topics": [
+      "3-urls"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 36,
+    "title": "Lab: Tasks",
+    "topics": [
+      "3-urls"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 37,
+    "title": "Begin Lab 3.1: Working with Amazon S3",
+    "topics": [
+      "3-urls"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 38,
+    "title": "Lab debrief: Key takeaways",
+    "topics": [
+      "3-urls"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 39,
+    "title": "Module wrap-up",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 3,
+    "slide": 40,
+    "title": "Module summary ",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 3,
+    "slide": 41,
+    "title": "Complete the knowledge check",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 3,
+    "slide": 42,
+    "title": "Sample exam question",
+    "topics": [
+      "3-version"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 43,
+    "title": "Sample exam question: Response choices",
+    "topics": [
+      "3-version"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 44,
+    "title": "Sample exam question: Answer",
+    "topics": [
+      "3-version"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 45,
+    "title": "Thank you",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 3,
+    "slide": 46,
+    "title": "Image source files for development use only.",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 3,
+    "slide": 47,
+    "title": "Amazon S3 as part of developing a cloud application ",
+    "topics": [
+      "3-basics"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 48,
+    "title": "Amazon S3 bucket Regions",
+    "topics": [
+      "3-buckets"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 49,
+    "title": "SELECT object",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Diagram, repeated source artwork or orientation; inspected in full-deck review"
+  },
+  {
+    "module": 3,
+    "slide": 50,
+    "title": "DELETE object: Versioning disabled",
+    "topics": [
+      "3-version"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 51,
+    "title": "DELETE object: Versioning enabled",
+    "topics": [
+      "3-version"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 52,
+    "title": "Identity-based policies and resource-based policies",
+    "topics": [
+      "3-security"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 53,
+    "title": "Access control lists (ACLs) ",
+    "topics": [
+      "3-security"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 3,
+    "slide": 54,
+    "title": "Presigned URLs ",
+    "topics": [
+      "3-urls"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 1,
+    "title": "Module 4: Securing Accessto Cloud Resources",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 4,
+    "slide": 2,
+    "title": "Section 1: Introduction",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 4,
+    "slide": 3,
+    "title": "Module objectives",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 4,
+    "slide": 4,
+    "title": "Module overview",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 4,
+    "slide": 5,
+    "title": "Café business requirement",
+    "topics": [
+      "4-shared"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 6,
+    "title": "Section 2: Shared responsibility model",
+    "topics": [
+      "4-shared"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 7,
+    "title": "Shared responsibility model principles",
+    "topics": [
+      "4-shared"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 8,
+    "title": "Activity: Shared Responsibility Model",
+    "topics": [
+      "4-shared"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 9,
+    "title": "Activity: Shared Responsibility Model 2",
+    "topics": [
+      "4-shared"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 10,
+    "title": "Activity: Shared Responsibility Model",
+    "topics": [
+      "4-shared"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 11,
+    "title": "Activity: Shared Responsibility Model",
+    "topics": [
+      "4-shared"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 12,
+    "title": "Shared responsibility example",
+    "topics": [
+      "4-shared"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 13,
+    "title": "Section 3: Introducing AWS Identity and Access Management (IAM)",
+    "topics": [
+      "4-auth"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 14,
+    "title": "AWS Identity and Access Management (IAM)",
+    "topics": [
+      "4-auth"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 15,
+    "title": "Security fundamentals ",
+    "topics": [
+      "4-auth"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 16,
+    "title": "IAM overview",
+    "topics": [
+      "4-auth"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 17,
+    "title": "Section 4: Authenticating with IAM",
+    "topics": [
+      "4-auth"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 18,
+    "title": "Authentication scenarios",
+    "topics": [
+      "4-auth"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 19,
+    "title": "IAM credentials for authentication",
+    "topics": [
+      "4-auth"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 20,
+    "title": "Multi-factor authentication (MFA)",
+    "topics": [
+      "4-auth"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 21,
+    "title": "IAM roles provide temporary credentials",
+    "topics": [
+      "4-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 22,
+    "title": "Demonstration: Configuring Cross-Account Access to AWS Resources",
+    "topics": [
+      "4-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 23,
+    "title": "Providing access to AWS resources through your IDE",
+    "topics": [
+      "4-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 24,
+    "title": "AWS credentials file and credential profiles",
+    "topics": [
+      "4-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 25,
+    "title": "Section 4 key takeaways",
+    "topics": [
+      "4-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 26,
+    "title": "Section 5: Authorizing with IAM",
+    "topics": [
+      "4-policy"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 27,
+    "title": "Policies and permissions",
+    "topics": [
+      "4-policy"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 28,
+    "title": "Demonstration: Creating IAM Users and IAM Groups",
+    "topics": [
+      "4-policy"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 29,
+    "title": "Identity-based and resource-based policies",
+    "topics": [
+      "4-policy"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 30,
+    "title": "Example of identity-based policy",
+    "topics": [
+      "4-policy"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 31,
+    "title": "Example cross-account, resource-based policy",
+    "topics": [
+      "4-policy"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 32,
+    "title": "Comparing managed and inline IAM policies",
+    "topics": [
+      "4-policy"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 33,
+    "title": "Evaluation logic for IAM policies",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 34,
+    "title": "Example IAM policy: Allow statement",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 35,
+    "title": "Example IAM policy: Deny statement",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 36,
+    "title": "Principle of least privilege",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 37,
+    "title": "IAM scenario (1)",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 38,
+    "title": "IAM scenario (2)",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 39,
+    "title": "IAM scenario (3)",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 40,
+    "title": "IAM scenario (4)",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 41,
+    "title": "IAM scenario (5)",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 42,
+    "title": "IAM scenario (6)",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 43,
+    "title": "Section 5 key takeaways",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 44,
+    "title": "Module wrap-up",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 4,
+    "slide": 45,
+    "title": "Module summary",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 4,
+    "slide": 46,
+    "title": "Complete the knowledge check",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 4,
+    "slide": 47,
+    "title": "Sample exam question",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 48,
+    "title": "Sample exam question: Responses",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 49,
+    "title": "Sample exam question: Answer",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 50,
+    "title": "Additional resources",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 4,
+    "slide": 51,
+    "title": "Thank you",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 4,
+    "slide": 52,
+    "title": "Image source files for development use only.",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 4,
+    "slide": 53,
+    "title": "Shared responsibility example",
+    "topics": [
+      "4-shared"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 54,
+    "title": "IAM overview",
+    "topics": [
+      "4-auth"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 55,
+    "title": "Authentication scenarios",
+    "topics": [
+      "4-auth"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 56,
+    "title": "IAM roles provide temporary credentials",
+    "topics": [
+      "4-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 57,
+    "title": "Evaluation logic for IAM policies",
+    "topics": [
+      "4-eval"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 58,
+    "title": "IAM scenario (1)",
+    "topics": [
+      "4-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 59,
+    "title": "IAM scenario (2)",
+    "topics": [
+      "4-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 60,
+    "title": "IAM scenario (3)",
+    "topics": [
+      "4-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 61,
+    "title": "IAM scenario (4)",
+    "topics": [
+      "4-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 62,
+    "title": "IAM scenario (5)",
+    "topics": [
+      "4-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 63,
+    "title": "IAM scenario (6)",
+    "topics": [
+      "4-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 4,
+    "slide": 64,
+    "title": "IAM Scenario 3",
+    "topics": [
+      "4-roles"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 1,
+    "title": "Module 5: Developing Flexible NoSQL Solutions",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 5,
+    "slide": 2,
+    "title": "Section 1: Introduction",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 5,
+    "slide": 3,
+    "title": "Module objectives",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 5,
+    "slide": 4,
+    "title": "Module overview",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 5,
+    "slide": 5,
+    "title": "Café business requirement",
+    "topics": [
+      "5-options"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 6,
+    "title": "NoSQL databases as part of developing a cloud application",
+    "topics": [
+      "5-options"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 7,
+    "title": "Section 2: Introducing AWS database options",
+    "topics": [
+      "5-options"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 8,
+    "title": "Database types",
+    "topics": [
+      "5-options"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 9,
+    "title": "Database type: Relational",
+    "topics": [
+      "5-options"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 10,
+    "title": "Database type: Nonrelational",
+    "topics": [
+      "5-options"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 11,
+    "title": "Comparing structured data storage",
+    "topics": [
+      "5-options"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 12,
+    "title": "AWS database options: Relational",
+    "topics": [
+      "5-options"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 13,
+    "title": "AWS database options: Nonrelational",
+    "topics": [
+      "5-options"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 14,
+    "title": "Section 2 key takeaways",
+    "topics": [
+      "5-options"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 15,
+    "title": "Section 3: Key concepts for DynamoDB",
+    "topics": [
+      "5-keys"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 16,
+    "title": "Basic components of DynamoDB",
+    "topics": [
+      "5-keys"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 17,
+    "title": "Types of primary keys",
+    "topics": [
+      "5-keys"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 18,
+    "title": "Items and attribute types",
+    "topics": [
+      "5-keys"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 19,
+    "title": "Section 3 key takeaways",
+    "topics": [
+      "5-keys"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 20,
+    "title": "Section 4: Partitions and data distribution",
+    "topics": [
+      "5-partitions"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 21,
+    "title": "Partitions",
+    "topics": [
+      "5-partitions"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 22,
+    "title": "Partitioning with a simple primary key: Example",
+    "topics": [
+      "5-partitions"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 23,
+    "title": "Partitioning with a composite primary key: Example",
+    "topics": [
+      "5-partitions"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 24,
+    "title": "Section 4 key takeaways",
+    "topics": [
+      "5-partitions"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 25,
+    "title": "Section 5: Secondary indexes",
+    "topics": [
+      "5-index"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 26,
+    "title": "Secondary indexes",
+    "topics": [
+      "5-index"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 27,
+    "title": "Global secondary index example",
+    "topics": [
+      "5-index"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 28,
+    "title": "Local secondary index example",
+    "topics": [
+      "5-index"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 29,
+    "title": "Section 5 key takeaways",
+    "topics": [
+      "5-index"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 30,
+    "title": "Section 6: Read/write throughput",
+    "topics": [
+      "5-consistency"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 31,
+    "title": "Read consistency",
+    "topics": [
+      "5-consistency"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 32,
+    "title": "Transactions",
+    "topics": [
+      "5-consistency"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 33,
+    "title": "Provisioned read/write throughput",
+    "topics": [
+      "5-capacity"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 34,
+    "title": "On-demand read/write throughput",
+    "topics": [
+      "5-capacity"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 35,
+    "title": "Activity: Calculating RCUs and WCUs",
+    "topics": [
+      "5-capacity"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 36,
+    "title": "Activity: Calculating RCU",
+    "topics": [
+      "5-capacity"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 37,
+    "title": "Calculating RCU: Answer",
+    "topics": [
+      "5-capacity"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 38,
+    "title": "Activity: Calculating WCU",
+    "topics": [
+      "5-capacity"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 39,
+    "title": "Calculating WCU: Answer",
+    "topics": [
+      "5-capacity"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 40,
+    "title": "Section 6 key takeaways",
+    "topics": [
+      "5-consistency",
+      "5-capacity"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 41,
+    "title": "Section 7: Streams and global tables",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 42,
+    "title": "DynamoDB Streams",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 43,
+    "title": "Global tables",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 44,
+    "title": "Global tables: Data replication",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 45,
+    "title": "Global tables: Concurrent updates",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 46,
+    "title": "Global tables: Read consistency",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 47,
+    "title": "Section 7 key takeaways",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 48,
+    "title": "Section 8: Backup and restore",
+    "topics": [
+      "5-backup"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 49,
+    "title": "On-demand backups and point-in-time recovery",
+    "topics": [
+      "5-backup"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 50,
+    "title": "Section 9: Basic operations for DynamoDB tables",
+    "topics": [
+      "5-crud"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 51,
+    "title": "Amazon DynamoDB API operations",
+    "topics": [
+      "5-crud"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 52,
+    "title": "Creating a table",
+    "topics": [
+      "5-crud"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 53,
+    "title": "Creating an item",
+    "topics": [
+      "5-crud"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 54,
+    "title": "Updating an item",
+    "topics": [
+      "5-crud"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 55,
+    "title": "Deleting an item",
+    "topics": [
+      "5-crud"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 56,
+    "title": "Condition expressions",
+    "topics": [
+      "5-crud"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 57,
+    "title": "Reading an item",
+    "topics": [
+      "5-crud"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 58,
+    "title": "Querying a table",
+    "topics": [
+      "5-query"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 59,
+    "title": "Scanning a table",
+    "topics": [
+      "5-query"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 60,
+    "title": "Optimizing performance and cost: Limiting returned data",
+    "topics": [
+      "5-query"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 61,
+    "title": "Batch operations",
+    "topics": [
+      "5-query"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 62,
+    "title": "Transactional operations",
+    "topics": [
+      "5-consistency",
+      "5-query"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 63,
+    "title": "Section 9 key takeaways",
+    "topics": [
+      "5-crud"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 64,
+    "title": "Lab 5.1: Working with Amazon DynamoDB",
+    "topics": [
+      "5-crud"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 65,
+    "title": "Lab: Tasks",
+    "topics": [
+      "5-crud"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 66,
+    "title": "Begin Lab 5.1: Working with Amazon DynamoDB",
+    "topics": [
+      "5-crud"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 67,
+    "title": "Lab debrief: Key takeaways",
+    "topics": [
+      "5-crud"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 68,
+    "title": "Module wrap-up",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 5,
+    "slide": 69,
+    "title": "Module summary",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 5,
+    "slide": 70,
+    "title": "Complete the knowledge check",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 5,
+    "slide": 71,
+    "title": "Sample exam question",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 72,
+    "title": "Sample exam question: Response choices",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 73,
+    "title": "Sample exam question: Answer",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 74,
+    "title": "Thank you",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 5,
+    "slide": 75,
+    "title": "Image source files for development use only.",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 5,
+    "slide": 76,
+    "title": "NoSQL databases as part of developing a cloud application ",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Diagram, repeated source artwork or orientation; inspected in full-deck review"
+  },
+  {
+    "module": 5,
+    "slide": 77,
+    "title": "Basic components of DynamoDB ",
+    "topics": [
+      "5-keys"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 78,
+    "title": "Provisioned read/write throughput ",
+    "topics": [
+      "5-capacity"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 79,
+    "title": "DynamoDB Streams ",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 80,
+    "title": "Global tables ",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 81,
+    "title": "Global tables: Data replication ",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 82,
+    "title": "Global tables: Concurrent updates ",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 83,
+    "title": "Global tables: Read consistency ",
+    "topics": [
+      "5-streams"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 5,
+    "slide": 84,
+    "title": "On-demand backups and point-in-time recovery ",
+    "topics": [
+      "5-backup"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 1,
+    "title": "Module 6: Developing REST APIs",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 6,
+    "slide": 2,
+    "title": "Section 1: Introduction",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 6,
+    "slide": 3,
+    "title": "Module objectives",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 6,
+    "slide": 4,
+    "title": "Module overview",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 6,
+    "slide": 5,
+    "title": "Café business requirement",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 6,
+    "title": "REST APIs as part of developing a cloud application",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 7,
+    "title": "Section 2: Introducing APIs",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 8,
+    "title": "What is an API? ",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 9,
+    "title": "A typical application",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 10,
+    "title": "Requests and responses",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 11,
+    "title": "What is a RESTful API?",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 12,
+    "title": "Section 2 key takeaways",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 13,
+    "title": "Section 3: Introducing API Gateway",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 14,
+    "title": "An API gateway is a proxy",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 15,
+    "title": "What is Amazon API Gateway?",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 16,
+    "title": "API Gateway supported protocols",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 17,
+    "title": "RESTful APIs in API Gateway",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 18,
+    "title": "Two types of RESTful APIs in API Gateway",
+    "topics": [
+      "6-api",
+      "6-types"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 19,
+    "title": "WebSocket APIs in API Gateway",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 20,
+    "title": "WebSockets are bidirectional",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 21,
+    "title": "More efficient for chatty applications",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 22,
+    "title": "API Gateway management",
+    "topics": [
+      "6-api",
+      "6-types"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 23,
+    "title": "Section 3 key takeaways",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 24,
+    "title": "Section 4: Creating a REST API",
+    "topics": [
+      "6-routes"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 25,
+    "title": "Creating a REST or HTTP API ",
+    "topics": [
+      "6-routes"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 26,
+    "title": "Example: Creating an HTTP API that is connected to a Lambda function",
+    "topics": [
+      "6-routes"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 27,
+    "title": "Methods and routes",
+    "topics": [
+      "6-routes"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 28,
+    "title": "Creating GET routes",
+    "topics": [
+      "6-routes"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 29,
+    "title": "Creating a PUT route",
+    "topics": [
+      "6-routes"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 30,
+    "title": "Using the greedy path variable {proxy+}",
+    "topics": [
+      "6-routes"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 31,
+    "title": "Creating a WebSocket API",
+    "topics": [
+      "6-routes"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 32,
+    "title": "Importing an API",
+    "topics": [
+      "6-routes"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 33,
+    "title": "Section 4 key takeaways",
+    "topics": [
+      "6-routes"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 34,
+    "title": "Section 5: Integrating with API Gateway",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 6,
+    "slide": 35,
+    "title": "Endpoint types",
+    "topics": [
+      "6-endpoints"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 36,
+    "title": "Using client-side SDKs",
+    "topics": [
+      "6-endpoints"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 37,
+    "title": "Backend integrations",
+    "topics": [
+      "6-endpoints",
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 38,
+    "title": "Example integration flow",
+    "topics": [
+      "6-endpoints",
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 39,
+    "title": "Lambda non-proxy vs. proxy integration",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 40,
+    "title": "Example standard response in non-proxy integration",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 41,
+    "title": "Example Lambda error response in proxy integration",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 42,
+    "title": "Modifying requests and responses in a non-proxy integration",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 43,
+    "title": "Example: Modifying a request by using VTL",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 44,
+    "title": "Transforming the response",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 45,
+    "title": "First-class integrations",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 46,
+    "title": "Example: First-class integration",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 47,
+    "title": "HTTP proxy integrations",
+    "topics": [
+      "6-endpoints"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 48,
+    "title": "Private integrations",
+    "topics": [
+      "6-endpoints"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 49,
+    "title": "Example: Creating a private integration",
+    "topics": [
+      "6-endpoints"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 50,
+    "title": "Transforming requests and responses",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 51,
+    "title": "Transforming requests and responses",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 52,
+    "title": "Example request transformation",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 53,
+    "title": "Section 5 key takeaways",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 54,
+    "title": "Section 6: Deploying an API",
+    "topics": [
+      "6-stage"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 55,
+    "title": "Deployments are associated to a stage",
+    "topics": [
+      "6-stage"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 56,
+    "title": "Using stages as development environments",
+    "topics": [
+      "6-stage"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 57,
+    "title": "Connecting to different backends by using stage variables",
+    "topics": [
+      "6-stage"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 58,
+    "title": "Using canary deployments",
+    "topics": [
+      "6-stage"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 59,
+    "title": "Updating canary deployments",
+    "topics": [
+      "6-stage"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 60,
+    "title": "Section 6 key takeaways",
+    "topics": [
+      "6-stage"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 61,
+    "title": "Section 7: Controlling access to a REST API",
+    "topics": [
+      "6-protect"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 62,
+    "title": "Protecting APIs from unwanted traffic",
+    "topics": [
+      "6-protect"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 63,
+    "title": "IAM resource policies",
+    "topics": [
+      "6-protect"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 64,
+    "title": "Custom domains for certificates",
+    "topics": [
+      "6-protect"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 65,
+    "title": "Client certificates",
+    "topics": [
+      "6-protect"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 66,
+    "title": "AWS WAF",
+    "topics": [
+      "6-protect"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 67,
+    "title": "CORS prevents cross-origin requests",
+    "topics": [
+      "6-cors"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 68,
+    "title": "Cross-origin requests with CORS support",
+    "topics": [
+      "6-cors"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 69,
+    "title": "API Gateway with CORS",
+    "topics": [
+      "6-cors"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 70,
+    "title": "Account-level rate limiting (throttling)",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 71,
+    "title": "Stage and method or route throttling",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 72,
+    "title": "Throttling by client with a usage plan",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 73,
+    "title": "Throttling by client and method",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 74,
+    "title": "How API Gateway applies throttling",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 75,
+    "title": "Authorizing API access",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 76,
+    "title": "Controlling authentication and authorization to REST APIs",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 77,
+    "title": "Example: Updating an existing route to use Amazon Cognito user pools",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 78,
+    "title": "Lambda authorizers",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 79,
+    "title": "Section 7 key takeaways",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 80,
+    "title": "Section 8: Monitoring a REST API",
+    "topics": [
+      "6-monitor"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 81,
+    "title": "API Gateway default metrics and logging options for REST APIs",
+    "topics": [
+      "6-monitor"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 82,
+    "title": "Creating access logs",
+    "topics": [
+      "6-monitor"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 83,
+    "title": "Other monitoring tools",
+    "topics": [
+      "6-monitor"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 84,
+    "title": "Section 9: Optimizing API Gateway",
+    "topics": [
+      "6-monitor"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 85,
+    "title": "Caching",
+    "topics": [
+      "6-monitor"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 86,
+    "title": "Payload compression",
+    "topics": [
+      "6-monitor"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 87,
+    "title": "Compression example",
+    "topics": [
+      "6-monitor"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 88,
+    "title": "Lab 6.1: Developing REST APIs with Amazon API Gateway",
+    "topics": [
+      "6-lab"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 89,
+    "title": "Lab: Scenario",
+    "topics": [
+      "6-lab"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 90,
+    "title": "Lab: Tasks",
+    "topics": [
+      "6-lab"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 91,
+    "title": "Lab: Final product",
+    "topics": [
+      "6-lab"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 92,
+    "title": "Begin Lab 6.1: Developing REST APIs with Amazon API Gateway",
+    "topics": [
+      "6-lab"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 93,
+    "title": "Lab debrief: Key takeaways",
+    "topics": [
+      "6-lab"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 94,
+    "title": "Module wrap-up",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 6,
+    "slide": 95,
+    "title": "Module summary",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 6,
+    "slide": 96,
+    "title": "Complete the knowledge check",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 6,
+    "slide": 97,
+    "title": "Sample exam question",
+    "topics": [
+      "6-stage"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 98,
+    "title": "Sample exam question: Responses",
+    "topics": [
+      "6-stage"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 99,
+    "title": "Sample exam question: Answer",
+    "topics": [
+      "6-stage"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 100,
+    "title": "Additional resources",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 6,
+    "slide": 101,
+    "title": "Thank you",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 6,
+    "slide": 102,
+    "title": "Image source files for development use only.",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Administrative, section divider, lab guidance or summary; inspected"
+  },
+  {
+    "module": 6,
+    "slide": 103,
+    "title": "REST APIs as part of developinga cloud application",
+    "topics": [],
+    "reviewed": true,
+    "classification": "Diagram, repeated source artwork or orientation; inspected in full-deck review"
+  },
+  {
+    "module": 6,
+    "slide": 104,
+    "title": "A typical application ",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 105,
+    "title": "Requests and responses ",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 106,
+    "title": "An API gateway is a proxy ",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 107,
+    "title": "What is Amazon API Gateway? ",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 108,
+    "title": "API Gateway supported protocols ",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 109,
+    "title": "Two types of RESTful APIs in API Gateway ",
+    "topics": [
+      "6-api",
+      "6-types"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 110,
+    "title": "WebSockets are bidirectional ",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 111,
+    "title": "More efficient for chatty applications ",
+    "topics": [
+      "6-api"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 112,
+    "title": "Methods and routes ",
+    "topics": [
+      "6-routes"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 113,
+    "title": "Importing an API ",
+    "topics": [
+      "6-routes"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 114,
+    "title": "Endpoint types ",
+    "topics": [
+      "6-types",
+      "6-endpoints"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 115,
+    "title": "Using client-side SDKs ",
+    "topics": [
+      "6-endpoints"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 116,
+    "title": "Backend integrations ",
+    "topics": [
+      "6-endpoints",
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 117,
+    "title": "Example integration flow ",
+    "topics": [
+      "6-endpoints",
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 118,
+    "title": "Lambda non-proxy vs. proxy integration ",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 119,
+    "title": "Modifying requests and responses in a non-proxy integration ",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 120,
+    "title": "First-class integrations ",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 121,
+    "title": "HTTP proxy integrations ",
+    "topics": [
+      "6-endpoints"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 122,
+    "title": "Private integrations ",
+    "topics": [
+      "6-endpoints"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 123,
+    "title": "Transforming requests and responses 2",
+    "topics": [
+      "6-mapping"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 124,
+    "title": "Connecting to different backends by using stage variables ",
+    "topics": [
+      "6-stage"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 125,
+    "title": "Updating canary deployments ",
+    "topics": [
+      "6-stage"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 126,
+    "title": "IAM resource policies ",
+    "topics": [
+      "6-protect"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 127,
+    "title": "AWS WAF ",
+    "topics": [
+      "6-protect"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 128,
+    "title": "CORS prevents cross-origin requests ",
+    "topics": [
+      "6-cors"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 129,
+    "title": "Cross-origin requests with CORS support ",
+    "topics": [
+      "6-cors"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 130,
+    "title": "API Gateway with CORS ",
+    "topics": [
+      "6-cors"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 131,
+    "title": "Account-level rate limiting (throttling) ",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 132,
+    "title": "Stage and method or route throttling ",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 133,
+    "title": "Throttling by client with a usage plan ",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 134,
+    "title": "Throttling by client and method ",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 135,
+    "title": "How API Gateway applies throttling ",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 136,
+    "title": "Controlling authentication and authorization to REST APIs ",
+    "topics": [
+      "6-throttle"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 137,
+    "title": "API Gateway default metrics and logging options for REST APIs ",
+    "topics": [
+      "6-monitor"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 138,
+    "title": "Caching ",
+    "topics": [
+      "6-monitor"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  },
+  {
+    "module": 6,
+    "slide": 139,
+    "title": "Lab: Final product ",
+    "topics": [
+      "6-lab"
+    ],
+    "reviewed": true,
+    "classification": "Mapped to rewritten study topic"
+  }
+]
