@@ -1,3 +1,4 @@
+import { moduleLabel, topicModule } from "../content/foundations";
 import { useEffect, useState } from "react";
 import {
   Link,
@@ -59,14 +60,17 @@ export function Heading({
 export function Dashboard() {
   const { progress } = useStudy();
   const s = stats(progress);
-  const next = progress.lastTopic ? Number(progress.lastTopic[0]) : 1;
+  const next = progress.lastTopic ? topicModule(progress.lastTopic) : 101;
   const weak = modules
     .map((m) => ({ ...m, s: stats(progress, m.id) }))
     .filter((m) => m.s.attempts > 0 && m.s.accuracy! < 75)
     .sort((a, b) => a.s.accuracy! - b.s.accuracy!);
   return (
     <>
-      <Heading title="Endterm Prep." description="Six modules. One goal.">
+      <Heading
+        title="Endterm Prep."
+        description="Cloud Computing final · November 20, 2026"
+      >
         <Button asChild variant="outline">
           <Link to="/exam">
             <Timer size={17} /> Take a mock exam
@@ -80,12 +84,12 @@ export function Dashboard() {
               ? "Pick up where you left off."
               : s.attempts
                 ? "A little more confident, every session."
-                : "Your next chapter starts here."}
+                : "Cloud Foundations"}
           </h2>
           <p>
             {progress.draft && !progress.draft.finished
               ? `Your ${progress.draft.config.exam ? "exam" : "practice session"} is saved. Continue with question ${progress.draft.index + 1} of ${progress.draft.ids.length}.`
-              : "Learn the concepts, test your recall, and make the tricky parts stick."}
+              : "Review the ten Foundations modules and practice with the updated mock exam."}
           </p>
           <Button asChild>
             <Link
@@ -99,7 +103,7 @@ export function Dashboard() {
             >
               {s.attempts || progress.lastTopic
                 ? "Continue studying"
-                : "Start with Module 1"}
+                : "Start Cloud Foundations"}
               <ArrowRight size={18} />
             </Link>
           </Button>
@@ -140,32 +144,45 @@ export function Dashboard() {
           Quick revision <ArrowRight size={16} />
         </Link>
       </div>
+      <div className="actions study-links">
+        <Button asChild variant="outline">
+          <Link to="/flashcards?course=foundations">
+            Foundations flashcards
+          </Link>
+        </Button>
+        <Button asChild variant="outline">
+          <Link to="/practice">Foundations practice</Link>
+        </Button>
+      </div>
       <div className="module-grid">
-        {modules.map((m) => {
-          const ms = stats(progress, m.id);
-          return (
-            <article className={`module-card module-${m.id}`} key={m.id}>
-              <div className="module-card-top">
-                <span className="module-number">
-                  Module {String(m.id).padStart(2, "0")}
-                </span>
-                <BookOpen size={19} />
-              </div>
-              <h3>{m.short}</h3>
-              <p>{m.description}</p>
-              <div className="module-meta">
-                <span>
-                  {m.topics.length} topics · {ms.total} questions
-                </span>
-                <span>{ms.completion}%</span>
-              </div>
-              <Meter value={ms.completion} label={`Module ${m.id} progress`} />
-              <Link className="module-link" to={`/learn/${m.id}`}>
-                Study module <ArrowUpRight size={18} />
-              </Link>
-            </article>
-          );
-        })}
+        {[...modules]
+          .sort((a, b) => Number(b.id >= 101) - Number(a.id >= 101))
+          .map((m) => {
+            const ms = stats(progress, m.id);
+            return (
+              <article className={`module-card module-${m.id}`} key={m.id}>
+                <div className="module-card-top">
+                  <span className="module-number">{moduleLabel(m.id)}</span>
+                  <BookOpen size={19} />
+                </div>
+                <h3>{m.short}</h3>
+                <p>{m.description}</p>
+                <div className="module-meta">
+                  <span>
+                    {m.topics.length} topics · {ms.total} questions
+                  </span>
+                  <span>{ms.completion}%</span>
+                </div>
+                <Meter
+                  value={ms.completion}
+                  label={`Module ${m.id} progress`}
+                />
+                <Link className="module-link" to={`/learn/${m.id}`}>
+                  Study module <ArrowUpRight size={18} />
+                </Link>
+              </article>
+            );
+          })}
       </div>
       <section className="review-banner">
         <div>
@@ -265,20 +282,20 @@ export function Learn() {
         <div className="module-tabs">
           {modules.map((m) => (
             <Link key={m.id} to={`/learn/${m.id}`}>
-              Module {m.id}: {m.short}
+              {moduleLabel(m.id)}: {m.short}
               <ArrowRight size={16} />
             </Link>
           ))}
         </div>
         <h2>Quick revision</h2>
         <p className="muted">
-          High-value distinctions from all six modules. Expand a module for its
-          key facts.
+          High-value distinctions from both courses. Expand a module for its key
+          facts.
         </p>
         {modules.map((m) => (
           <details className="revision" key={m.id}>
             <summary>
-              {m.id}. {m.short}
+              {moduleLabel(m.id)} · {m.short}
               <span>{m.topics.length} topics</span>
             </summary>
             {m.topics.map((t) => (
@@ -302,7 +319,10 @@ export function Learn() {
       <Link className="back-link" to="/learn">
         ← All modules & quick revision
       </Link>
-      <Heading title={`${m.id}. ${m.title}`} description={m.description}>
+      <Heading
+        title={`${moduleLabel(m.id)} · ${m.title}`}
+        description={m.description}
+      >
         <Button asChild variant="outline">
           <Link to={`/practice?module=${m.id}`}>
             Practice this module <ArrowRight size={17} />
@@ -333,7 +353,7 @@ export function Learn() {
             >
               {modules.map((x) => (
                 <option value={x.id} key={x.id}>
-                  {x.id}. {x.short}
+                  {moduleLabel(x.id)} · {x.short}
                 </option>
               ))}
             </select>
@@ -379,10 +399,12 @@ export function Learn() {
                   <code>{t.code}</code>
                 </pre>
               )}
-              <details className="misconception">
-                <summary>Common misconception</summary>
-                <p>{t.misconception}</p>
-              </details>
+              {t.misconception && (
+                <details className="misconception">
+                  <summary>Common misconception</summary>
+                  <p>{t.misconception}</p>
+                </details>
+              )}
               {t.note && (
                 <div className="source-note">
                   <strong>Source clarification</strong>
@@ -487,11 +509,11 @@ export function Review() {
           <h2>Topics worth revisiting</h2>
           <div className="weak-topics">
             {weak.map(({ t, accuracy, total }) => (
-              <Link key={t.id} to={`/learn/${t.id[0]}?topic=${t.id}`}>
+              <Link key={t.id} to={`/learn/${topicModule(t.id)}?topic=${t.id}`}>
                 <span>
                   {t.title}
                   <small>
-                    Module {t.id[0]} · {total} answers
+                    {moduleLabel(topicModule(t.id))} · {total} answers
                   </small>
                 </span>
                 <strong>{accuracy}%</strong>
@@ -543,7 +565,7 @@ export function Review() {
             {items.map((q) => (
               <article key={q.id}>
                 <span className="source-label">
-                  Module {q.module} · {topicById[q.topic]?.title}
+                  {moduleLabel(q.module)} · {topicById[q.topic]?.title}
                 </span>
                 <h3>{q.prompt}</h3>
                 <div className="actions">
@@ -624,7 +646,7 @@ export function Statistics() {
                 <tr key={m.id}>
                   <td>
                     <Link to={`/learn/${m.id}`}>
-                      {m.id}. {m.short}
+                      {moduleLabel(m.id)} · {m.short}
                     </Link>
                   </td>
                   <td>
@@ -705,16 +727,18 @@ export function Sources() {
     <>
       <Heading
         title="Built from your sources"
-        description="Six lecture decks, five Quizlet sets, and explicit corrections where the sources disagree."
+        description="Cloud Foundations and Cloud Developing lecture decks and linked knowledge checks."
       />
       <div className="source-summary">
         <CheckCircle2 />
         <p>
-          <strong>All 441 slides processed · all 50 flashcards imported</strong>
+          <strong>
+            {modules.length} lecture decks · {originalCards.length} adapted
+            Quizlet cards
+          </strong>
           <br />
-          Slide text, tables, editable diagram appendices and embedded diagrams
-          were inspected. Repeated artwork and administrative slides are tracked
-          in the coverage inventory.
+          Foundations notes cite their module and slide range. Each Quizlet link
+          below includes its import status.
         </p>
       </div>
       <p>
@@ -738,7 +762,7 @@ export function Sources() {
             {modules.map((m) => (
               <tr key={m.id}>
                 <td>
-                  {m.id}. {m.short}
+                  {moduleLabel(m.id)} · {m.short}
                 </td>
                 <td>{m.slides}</td>
                 <td>{originalCards.filter((q) => q.module === m.id).length}</td>
@@ -752,7 +776,10 @@ export function Sources() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Quizlet <ExternalLink size={14} />
+                      {originalCards.some((q) => q.module === m.id)
+                        ? "Quizlet · imported"
+                        : "Quizlet · link only"}{" "}
+                      <ExternalLink size={14} />
                     </a>
                   ) : (
                     "No set supplied"
@@ -764,8 +791,9 @@ export function Sources() {
         </table>
       </div>
       <p>
-        {questions.length} unique question records. All sets accessed through
-        Chrome on November 12, 2026 after the initial fetch returned HTTP 403.
+        {questions.length} unique question records. Foundations modules 2–10
+        have lecture-based questions and links to the supplied Quizlet sets. The
+        card text from those sets was unavailable during the update.
       </p>
       <h2>Corrections you should know</h2>
       {originalCards
@@ -773,7 +801,7 @@ export function Sources() {
         .map((q) => (
           <details className="revision" key={q.id}>
             <summary>
-              Module {q.module} · Flashcard {q.id.split("-")[1]}
+              {moduleLabel(q.module)} · Flashcard {q.id.split("-")[1]}
               <span>Source note</span>
             </summary>
             <p>{q.prompt}</p>
@@ -797,7 +825,7 @@ export function Sources() {
           .map((t) => (
             <details className="revision" key={t.id}>
               <summary>
-                Module {m.id} · {t.title}
+                {moduleLabel(m.id)} · {t.title}
               </summary>
               <p>{t.note}</p>
               {t.reference && (
@@ -852,7 +880,7 @@ export function SearchPage() {
         {results.map(({ m, t }) => (
           <Link key={t.id} to={`/learn/${m.id}?topic=${t.id}`}>
             <span className="source-label">
-              Module {m.id} · {m.short}
+              {moduleLabel(m.id)} · {m.short}
             </span>
             <h2>
               {t.title}

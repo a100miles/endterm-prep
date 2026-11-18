@@ -1,3 +1,5 @@
+import { foundationPractice } from "./foundations";
+import { foundationScenarios } from "./foundation-questions";
 import type { Question, Difficulty, Kind } from "./types";
 import { modules } from "./theory";
 import { originalCards } from "./flashcards";
@@ -1090,8 +1092,12 @@ textQ(
   "Self-assess: name concrete schema adaptation operations, such as combining names and mapping cellphone to mobilePhone.",
   "short",
 );
-export const lectureQuestions = generated;
-export const questions: Question[] = [...originalCards, ...generated];
+export const lectureQuestions = [
+  ...generated,
+  ...foundationPractice,
+  ...foundationScenarios,
+];
+export const questions: Question[] = [...originalCards, ...lectureQuestions];
 export const topicById = Object.fromEntries(
   modules.flatMap((m) => m.topics.map((t) => [t.id, t])),
 );

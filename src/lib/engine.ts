@@ -1,6 +1,7 @@
 import type { Difficulty, Kind, Question } from "../content/types";
 export interface Config {
   module: number;
+  course?: "foundations" | "developing" | "all";
   difficulty: Difficulty | "Mixed";
   type: Kind | "all";
   count: number;
@@ -37,17 +38,28 @@ export function grade(q: Question, answer: Answer): boolean | null {
     q.answer.every((a) => answer.includes(a))
   );
 }
-export function selectQuestions(bank: Question[], c: Config): Question[] {
-  const pool = bank.filter(
+export function matchesCourse(module: number, course?: Config["course"]) {
+  return (
+    !course ||
+    course === "all" ||
+    (course === "foundations" ? module >= 101 : module < 101)
+  );
+}
+export function eligibleQuestions(bank: Question[], c: Config) {
+  return bank.filter(
     (q) =>
+      matchesCourse(q.module, c.course) &&
       (!c.module || q.module === c.module) &&
       (c.difficulty === "Mixed" || q.difficulty === c.difficulty) &&
       (c.type === "all" || q.type === c.type) &&
       (!c.exam || q.type !== "short"),
   );
+}
+export function selectQuestions(bank: Question[], c: Config): Question[] {
+  const pool = eligibleQuestions(bank, c);
   const count = c.count === 0 ? pool.length : Math.min(c.count, pool.length);
   if (!c.exam) return (c.shuffle ? shuffle(pool) : pool).slice(0, count);
-  const groups = [1, 2, 3, 4, 5, 6].map((m) =>
+  const groups = shuffle([...new Set(pool.map((q) => q.module))]).map((m) =>
     shuffle(pool.filter((q) => q.module === m)),
   );
   const selected: Question[] = [];

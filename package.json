@@ -11,7 +11,9 @@
     "inventory": "tsx scripts/inventory.ts"
   },
   "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.3.0",
     "@fontsource-variable/manrope": "^5.2.8",
+    "@fontsource-variable/newsreader": "^5.3.0",
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-slot": "^1.2.3",

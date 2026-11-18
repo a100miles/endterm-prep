@@ -1,13 +1,13 @@
 # Endterm Prep.
 
-A personal study application for the first six AWS Academy Cloud Developing modules. It combines rewritten lecture notes, the five supplied Quizlet sets, practice questions, timed mock exams and browser-local progress.
+A personal study application for AWS Academy Cloud Foundations and Cloud Developing. It combines rewritten lecture notes, the five supplied Quizlet sets, practice questions, timed mock exams and browser-local progress.
 
 **Website:** https://a100miles.github.io/endterm-prep/
 
 ## Study modes
 
-- Learn: 43 source-referenced topics, examples, misconceptions, comparison tables, code, quick revision and an RCU/WCU calculator.
-- Flashcards: 50 original cards plus optional lecture-based study cards; flip, shuffle, module filters, known/unknown ratings and keyboard controls.
+- Learn: 70 source-referenced topics, examples, misconceptions, comparison tables, code, quick revision and an RCU/WCU calculator.
+- Flashcards: 60 adapted Quizlet cards plus optional lecture-based study cards; flip, shuffle, module filters, known/unknown ratings and keyboard controls.
 - Practice: module, difficulty, count, format, timing and order filters; feedback after submission; bookmarks and explicit short-answer self-assessment.
 - Mock exam: 40 questions by default, balanced across available modules, absolute-deadline timer, answer navigation, confirmation and detailed results. Short answers are excluded from automated exams.
 - Review and progress: latest incorrect answers, bookmarks, difficult cards, evidence-based topic recommendations, module statistics and recent sessions.
@@ -15,7 +15,7 @@ A personal study application for the first six AWS Academy Cloud Developing modu
 
 ## Content and accuracy
 
-All six supplied decks (441 slides including administrative slides and diagram appendices) and all five Quizlet sets were inspected. The app contains **158 unique questions: 50 imported and 108 additional**, and 43 theory topics. The original decks and extracted slide images are not redistributed.
+Study notes cover 16 decks and 70 topics. The bank contains 215 questions: 60 adapted Quizlet cards and 155 lecture-based questions. The ten new Foundations decks contain 615 slides. The Foundations module 1 Quizlet set yielded ten cards. Quizlet returned HTTP 403 for modules 2–10, so the Sources page links those sets and records the import status. Each of those modules has new lecture-based practice questions.
 
 Source wording has been normalized for clarity. Original answers and correction notes remain in the data and Sources screen. In particular:
 

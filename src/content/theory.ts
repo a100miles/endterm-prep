@@ -1,3 +1,4 @@
+import { foundationModules } from "./foundations";
 import type { Module, Topic } from "./types";
 function t(
   id: string,
@@ -924,4 +925,5 @@ export const modules: Module[] = [
       ),
     ],
   },
+  ...foundationModules,
 ];

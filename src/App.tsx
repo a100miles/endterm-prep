@@ -108,7 +108,7 @@ export default function App() {
         <Link to="/" className="brand">
           <Cloud /> Endterm Prep<span>.</span>
         </Link>
-        <p className="sidebar-sub">AWS Cloud Developing</p>
+        <p className="sidebar-sub">AWS Academy study guide</p>
         <nav aria-label="Main navigation">
           {nav.map(([path, label, Icon]) => (
             <NavLink key={path} end={path === "/"} to={path}>
@@ -137,7 +137,7 @@ export default function App() {
       </aside>
       <div className="workspace">
         <div className="topbar">
-          <span>Personal study space</span>
+          <span>Cloud Computing · Final review</span>
           <Link to="/search" className="search-link">
             <Search size={17} /> Search topics & terms <kbd>/</kbd>
           </Link>
@@ -180,7 +180,7 @@ export default function App() {
         </main>
         <footer>
           Endterm Prep.{" "}
-          <span>Study notes from your six AWS Academy modules.</span>
+          <span>AWS Academy Cloud Foundations and Cloud Developing.</span>
         </footer>
       </div>
     </div>

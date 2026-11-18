@@ -1,3 +1,5 @@
+import { moduleLabel, topicModule } from "../content/foundations";
+import { eligibleQuestions, matchesCourse } from "../lib/engine";
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import {
@@ -34,8 +36,17 @@ const byId = Object.fromEntries(questions.map((q) => [q.id, q]));
 export default function Quiz({ exam }: { exam: boolean }) {
   const { progress, update } = useStudy();
   const [params] = useSearchParams();
+  const initialModule = Number(params.get("module") || 0);
+  const defaultCourse = params.has("review")
+    ? "all"
+    : initialModule
+      ? initialModule >= 101
+        ? "foundations"
+        : "developing"
+      : "foundations";
   const [config, setConfig] = useState<Config>({
-    module: exam ? 0 : Number(params.get("module") || 0),
+    module: exam ? 0 : initialModule,
+    course: defaultCourse,
     difficulty: "Mixed",
     type: "all",
     count: exam ? 40 : 10,
@@ -67,20 +78,15 @@ export default function Quiz({ exam }: { exam: boolean }) {
       ...c,
       exam,
       type: exam ? "all" : c.type,
-      module: exam ? 0 : Number(params.get("module") || 0),
+      module: exam ? 0 : initialModule,
+      course: defaultCourse,
       count: exam ? 40 : 10,
       timed: exam,
     }));
     setCustomIds(null);
     setReveal(false);
   }, [exam, params]);
-  const available = bank.filter(
-    (q) =>
-      (!config.module || q.module === config.module) &&
-      (config.difficulty === "Mixed" || q.difficulty === config.difficulty) &&
-      (config.type === "all" || q.type === config.type) &&
-      (!exam || q.type !== "short"),
-  );
+  const available = eligibleQuestions(bank, config);
   const selectedCount =
     config.count === 0
       ? available.length
@@ -286,6 +292,7 @@ export default function Quiz({ exam }: { exam: boolean }) {
                 type: "all",
                 difficulty: "Mixed",
                 count: 0,
+                course: "all",
               }));
               update((p) => ({ ...p, draft: undefined }));
             }}
@@ -333,7 +340,7 @@ export default function Quiz({ exam }: { exam: boolean }) {
                 <Link
                   className="revision-link"
                   key={id}
-                  to={`/learn/${id[0]}?topic=${id}`}
+                  to={`/learn/${topicModule(id)}?topic=${id}`}
                 >
                   {topicById[id].title}
                   <ArrowUpRightSmall />
@@ -423,7 +430,7 @@ export default function Quiz({ exam }: { exam: boolean }) {
           <section className="quiz-question">
             <div className="question-meta">
               <span>
-                Module {current.module} · {current.difficulty}
+                {moduleLabel(current.module)} · {current.difficulty}
               </span>
               <Button
                 variant="ghost"
@@ -644,7 +651,7 @@ export default function Quiz({ exam }: { exam: boolean }) {
         }
         description={
           exam
-            ? "A timed, balanced exam across all six modules. Review your answers after submission."
+            ? "A timed exam with balanced coverage of the selected course. Review your answers after submission."
             : "Choose a focus, answer at your own pace, and learn from the explanation."
         }
       />
@@ -665,6 +672,23 @@ export default function Quiz({ exam }: { exam: boolean }) {
       )}
       <div className="configuration">
         <div className="form-grid">
+          <label>
+            Course
+            <select
+              value={config.course ?? "all"}
+              onChange={(e) =>
+                setConfig((c) => ({
+                  ...c,
+                  module: 0,
+                  course: e.target.value as Config["course"],
+                }))
+              }
+            >
+              <option value="foundations">Cloud Foundations</option>
+              <option value="developing">Cloud Developing</option>
+              <option value="all">Both courses</option>
+            </select>
+          </label>
           {!exam && (
             <label>
               Module
@@ -675,11 +699,13 @@ export default function Quiz({ exam }: { exam: boolean }) {
                 }
               >
                 <option value={0}>All modules</option>
-                {modules.map((m) => (
-                  <option key={m.id} value={m.id}>
-                    {m.id}. {m.short}
-                  </option>
-                ))}
+                {modules
+                  .filter((m) => matchesCourse(m.id, config.course))
+                  .map((m) => (
+                    <option key={m.id} value={m.id}>
+                      {moduleLabel(m.id)} · {m.short}
+                    </option>
+                  ))}
               </select>
             </label>
           )}

@@ -1,3 +1,5 @@
+import { moduleLabel } from "../content/foundations";
+import { matchesCourse, type Config } from "../lib/engine";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import {
@@ -18,20 +20,27 @@ export default function Flashcards() {
   const [params] = useSearchParams();
   const { progress, update } = useStudy();
   const [module, setModule] = useState(0);
-  const [source, setSource] = useState("original");
+  const [course, setCourse] = useState<Config["course"]>(
+    params.get("course") === "foundations" ? "foundations" : "all",
+  );
+  const [source, setSource] = useState(
+    params.has("course") || params.has("unknown") ? "all" : "original",
+  );
   const [unknown, setUnknown] = useState(params.has("unknown"));
   const [order, setOrder] = useState<string[]>([]);
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  const [query, setQuery] = useState("");
   const pool = useMemo(
     () =>
       questions.filter(
         (q) =>
+          matchesCourse(q.module, course) &&
           (!module || q.module === module) &&
           (source === "all" || q.source === "From Flashcards") &&
           (!unknown || progress.known[q.id] === false),
       ),
-    [module, source, unknown, progress.known],
+    [course, module, source, unknown, progress.known],
   );
   const cards = useMemo(
     () =>
@@ -55,7 +64,7 @@ export default function Flashcards() {
   useEffect(() => {
     setIndex(0);
     setFlipped(false);
-  }, [module, source, unknown]);
+  }, [course, module, source, unknown]);
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if ((e.target as HTMLElement).closest("input,select,textarea")) return;
@@ -83,10 +92,24 @@ export default function Flashcards() {
   return (
     <>
       <Heading
-        title="A little recall goes a long way."
+        title="Cloud flashcards"
         description="Think of your answer first. Flip the card, then rate your recall."
       />
       <div className="filters">
+        <label>
+          Course
+          <select
+            value={course}
+            onChange={(e) => {
+              setCourse(e.target.value as Config["course"]);
+              setModule(0);
+            }}
+          >
+            <option value="all">Both courses</option>
+            <option value="foundations">Cloud Foundations</option>
+            <option value="developing">Cloud Developing</option>
+          </select>
+        </label>
         <label>
           Module
           <select
@@ -94,11 +117,13 @@ export default function Flashcards() {
             onChange={(e) => setModule(Number(e.target.value))}
           >
             <option value={0}>All modules</option>
-            {modules.map((m) => (
-              <option value={m.id} key={m.id}>
-                {m.id}. {m.short}
-              </option>
-            ))}
+            {modules
+              .filter((m) => matchesCourse(m.id, course))
+              .map((m) => (
+                <option value={m.id} key={m.id}>
+                  {moduleLabel(m.id)} · {m.short}
+                </option>
+              ))}
           </select>
         </label>
         <label>
@@ -140,7 +165,9 @@ export default function Flashcards() {
           <p>
             {module === 1 && source === "original"
               ? "No Module 1 Quizlet set was supplied. Select all study questions for lecture-based cards."
-              : "Rate cards “Don’t know” to collect them here, or change your filters."}
+              : unknown
+                ? "Rate cards “Don’t know” to collect them here."
+                : "Try All study questions to include cards based on the lectures."}
           </p>
           <Button
             variant="outline"
@@ -156,7 +183,7 @@ export default function Flashcards() {
         <div className="flash-workspace">
           <div className="flash-meta">
             <span>
-              Module {card.module} · {topicById[card.topic]?.title}
+              {moduleLabel(card.module)} · {topicById[card.topic]?.title}
             </span>
             <span>
               {safeIndex + 1} / {cards.length}
@@ -265,6 +292,40 @@ export default function Flashcards() {
           <details className="source-details">
             <summary>Source reference</summary>
             <p>{card.reference}</p>
+          </details>
+          <details className="question-library">
+            <summary>Browse this deck · {cards.length} cards</summary>
+            <label>
+              Find a question
+              <input
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
+            </label>
+            <ul>
+              {cards.map(
+                (item, position) =>
+                  item.prompt
+                    .toLowerCase()
+                    .includes(query.trim().toLowerCase()) && (
+                    <li key={item.id}>
+                      <Button
+                        variant="ghost"
+                        onClick={() => {
+                          setIndex(position);
+                          setFlipped(false);
+                          document
+                            .querySelector<HTMLButtonElement>(".flashcard")
+                            ?.focus();
+                        }}
+                      >
+                        {position + 1}. {item.prompt}
+                      </Button>
+                    </li>
+                  ),
+              )}
+            </ul>
           </details>
           <p className="keyboard-help">
             <kbd>←</kbd> <kbd>→</kbd> Move · <kbd>Space</kbd> Flip ·{" "}

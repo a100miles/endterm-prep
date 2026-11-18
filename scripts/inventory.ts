@@ -19,14 +19,15 @@ const inventory = modules.map((m) => ({
   originalFlashcards: originalCards.filter((q) => q.module === m.id).length,
   additionalQuestions: lectureQuestions.filter((q) => q.module === m.id).length,
   totalQuestions: questions.filter((q) => q.module === m.id).length,
-  quizlet:
-    m.id === 1
-      ? null
-      : {
-          url: quizletUrls[m.id],
-          status: "All 10 cards read in Chrome, 2026-11-12",
-          duplicates: 0,
-        },
+  quizlet: !quizletUrls[m.id]
+    ? null
+    : {
+        url: quizletUrls[m.id],
+        status: originalCards.some((card) => card.module === m.id)
+          ? "Imported and adapted"
+          : "Linked; card text unavailable",
+        duplicates: 0,
+      },
 }));
 writeFileSync(
   "docs/content-inventory.json",
@@ -34,7 +35,7 @@ writeFileSync(
 );
 writeFileSync(
   "docs/content-inventory.md",
-  `# Content inventory\n\nProcessed: 6 decks, 441 slides, 50 original Quizlet cards, ${lectureQuestions.length} additional questions, ${questions.length} total unique question records, ${modules.flatMap((m) => m.topics).length} theory topics.\n\n| Module | Slides | Original cards | Added | Total |\n|---|---:|---:|---:|---:|\n` +
+  `# Content inventory\n\nProcessed: ${modules.length} decks, ${modules.reduce((total, m) => total + m.slides, 0)} slides, ${originalCards.length} imported Quizlet cards, ${lectureQuestions.length} additional questions, ${questions.length} total unique question records, ${modules.flatMap((m) => m.topics).length} theory topics.\n\n| Module | Slides | Original cards | Added | Total |\n|---|---:|---:|---:|---:|\n` +
     inventory
       .map(
         (m) =>
@@ -51,9 +52,9 @@ writeFileSync(
 );
 console.log(
   JSON.stringify({
-    modules: 6,
-    slides: 441,
-    original: 50,
+    modules: modules.length,
+    slides: modules.reduce((total, m) => total + m.slides, 0),
+    original: originalCards.length,
     additional: lectureQuestions.length,
     total: questions.length,
     topics: modules.flatMap((m) => m.topics).length,

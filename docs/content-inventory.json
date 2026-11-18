@@ -138,7 +138,7 @@
     "totalQuestions": 24,
     "quizlet": {
       "url": "https://quizlet.com/ca/704589033/aws-module-2-knowledge-check-flash-cards/",
-      "status": "All 10 cards read in Chrome, 2026-11-12",
+      "status": "Imported and adapted",
       "duplicates": 0
     }
   },
@@ -233,7 +233,7 @@
     "totalQuestions": 25,
     "quizlet": {
       "url": "https://quizlet.com/875909579/aws-module-3-knowledge-check-flash-cards/",
-      "status": "All 10 cards read in Chrome, 2026-11-12",
+      "status": "Imported and adapted",
       "duplicates": 0
     }
   },
@@ -306,7 +306,7 @@
     "totalQuestions": 23,
     "quizlet": {
       "url": "https://quizlet.com/877920643/aws-developer-module-4-knowledge-check-flash-cards/",
-      "status": "All 10 cards read in Chrome, 2026-11-12",
+      "status": "Imported and adapted",
       "duplicates": 0
     }
   },
@@ -441,7 +441,7 @@
     "totalQuestions": 37,
     "quizlet": {
       "url": "https://quizlet.com/877926687/aws-developer-module-5-knowledge-check-flash-cards/",
-      "status": "All 10 cards read in Chrome, 2026-11-12",
+      "status": "Imported and adapted",
       "duplicates": 0
     }
   },
@@ -593,7 +593,420 @@
     "totalQuestions": 37,
     "quizlet": {
       "url": "https://quizlet.com/883769808/aws-module-6-knowledge-check-flash-cards/",
-      "status": "All 10 cards read in Chrome, 2026-11-12",
+      "status": "Imported and adapted",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 101,
+    "name": "Cloud Concepts Overview",
+    "file": "AcademyCloudFoundations_Module_01.pptx",
+    "slides": 47,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "101-1",
+        "title": "Cloud models",
+        "slides": "5–13",
+        "terminology": [
+          "IaaS",
+          "Cloud models"
+        ]
+      },
+      {
+        "id": "101-2",
+        "title": "Cloud economics and agility",
+        "slides": "14–21",
+        "terminology": [
+          "Elasticity",
+          "Cloud economics and agility"
+        ]
+      },
+      {
+        "id": "101-3",
+        "title": "AWS services and adoption",
+        "slides": "22–40",
+        "terminology": [
+          "People",
+          "AWS services and adoption"
+        ]
+      }
+    ],
+    "originalFlashcards": 10,
+    "additionalQuestions": 4,
+    "totalQuestions": 14,
+    "quizlet": {
+      "url": "https://quizlet.com/hk/731657456/module-1-knowledge-check-aws-academy-cloud-foundations-flash-cards/",
+      "status": "Imported and adapted",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 102,
+    "name": "Cloud Economics and Billing",
+    "file": "AcademyCloudFoundations_Module_02.pptx",
+    "slides": 60,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "102-1",
+        "title": "Pricing and TCO",
+        "slides": "5–29",
+        "terminology": [
+          "AWS Pricing Calculator",
+          "Pricing and TCO"
+        ]
+      },
+      {
+        "id": "102-2",
+        "title": "Organizations and billing",
+        "slides": "30–47",
+        "terminology": [
+          "AWS Budgets",
+          "Organizations and billing"
+        ]
+      },
+      {
+        "id": "102-3",
+        "title": "Support and cost analysis",
+        "slides": "48–58",
+        "terminology": [
+          "Cost and Usage Report",
+          "Support and cost analysis"
+        ]
+      }
+    ],
+    "originalFlashcards": 0,
+    "additionalQuestions": 5,
+    "totalQuestions": 5,
+    "quizlet": {
+      "url": "https://quizlet.com/690247816/aws-module-2-knowledge-check-flash-cards/",
+      "status": "Linked; card text unavailable",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 103,
+    "name": "AWS Global Infrastructure Overview",
+    "file": "AcademyCloudFoundations_Module_03 (1).pptx",
+    "slides": 26,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "103-1",
+        "title": "Regions and Availability Zones",
+        "slides": "5–10",
+        "terminology": [
+          "Deploy across multiple Availability Zones",
+          "Regions and Availability Zones"
+        ]
+      },
+      {
+        "id": "103-2",
+        "title": "Edge and service categories",
+        "slides": "11–23",
+        "terminology": [
+          "CloudFront edge location",
+          "Edge and service categories"
+        ]
+      }
+    ],
+    "originalFlashcards": 0,
+    "additionalQuestions": 4,
+    "totalQuestions": 4,
+    "quizlet": {
+      "url": "https://quizlet.com/564070755/module-3-knowledge-check-flash-cards/",
+      "status": "Linked; card text unavailable",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 104,
+    "name": "AWS Cloud Security",
+    "file": "AcademyCloudFoundations_Module_04 (1).pptx",
+    "slides": 82,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "104-1",
+        "title": "Shared responsibility",
+        "slides": "5–15",
+        "terminology": [
+          "The customer",
+          "Shared responsibility"
+        ]
+      },
+      {
+        "id": "104-2",
+        "title": "IAM and account protection",
+        "slides": "17–57",
+        "terminology": [
+          "IAM role through an instance profile",
+          "IAM and account protection"
+        ]
+      },
+      {
+        "id": "104-3",
+        "title": "Security services and encryption",
+        "slides": "59–75",
+        "terminology": [
+          "AWS Artifact",
+          "Security services and encryption"
+        ]
+      }
+    ],
+    "originalFlashcards": 0,
+    "additionalQuestions": 5,
+    "totalQuestions": 5,
+    "quizlet": {
+      "url": "https://quizlet.com/692746601/aws-module-4-knowledge-check-flash-cards/",
+      "status": "Linked; card text unavailable",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 105,
+    "name": "Networking and Content Delivery",
+    "file": "AcademyCloudFoundations_Module_05.pptx",
+    "slides": 70,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "105-1",
+        "title": "CIDR, VPCs and subnets",
+        "slides": "5–18",
+        "terminology": [
+          "251",
+          "CIDR, VPCs and subnets"
+        ]
+      },
+      {
+        "id": "105-2",
+        "title": "Connectivity and routing",
+        "slides": "20–31",
+        "terminology": [
+          "Public NAT gateway",
+          "Connectivity and routing"
+        ]
+      },
+      {
+        "id": "105-3",
+        "title": "Network filtering",
+        "slides": "33–47",
+        "terminology": [
+          "Network ACL",
+          "Network filtering"
+        ]
+      },
+      {
+        "id": "105-4",
+        "title": "DNS and content delivery",
+        "slides": "49–63",
+        "terminology": [
+          "Amazon Route 53",
+          "DNS and content delivery"
+        ]
+      }
+    ],
+    "originalFlashcards": 0,
+    "additionalQuestions": 6,
+    "totalQuestions": 6,
+    "quizlet": {
+      "url": "https://quizlet.com/692750107/aws-module-5-knowledge-check-flash-cards/",
+      "status": "Linked; card text unavailable",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 106,
+    "name": "Compute",
+    "file": "AcademyCloudFoundations_Module_06 (1).pptx",
+    "slides": 91,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "106-1",
+        "title": "Launching EC2",
+        "slides": "9–34",
+        "terminology": [
+          "AMI",
+          "Launching EC2"
+        ]
+      },
+      {
+        "id": "106-2",
+        "title": "Compute pricing",
+        "slides": "45–55",
+        "terminology": [
+          "Spot Instances",
+          "Compute pricing"
+        ]
+      },
+      {
+        "id": "106-3",
+        "title": "Containers, Lambda and Beanstalk",
+        "slides": "56–84",
+        "terminology": [
+          "Amazon ECR",
+          "Containers, Lambda and Beanstalk"
+        ]
+      }
+    ],
+    "originalFlashcards": 0,
+    "additionalQuestions": 5,
+    "totalQuestions": 5,
+    "quizlet": {
+      "url": "https://quizlet.com/692755224/aws-module-6-knowledge-check-flash-cards/",
+      "status": "Linked; card text unavailable",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 107,
+    "name": "Storage",
+    "file": "AcademyCloudFoundations_Module_07.pptx",
+    "slides": 66,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "107-1",
+        "title": "Block, object and file",
+        "slides": "6–42",
+        "terminology": [
+          "Amazon EFS",
+          "Block, object and file"
+        ]
+      },
+      {
+        "id": "107-2",
+        "title": "Archiving and lifecycle",
+        "slides": "46–59",
+        "terminology": [
+          "S3 Lifecycle configuration",
+          "Archiving and lifecycle"
+        ]
+      }
+    ],
+    "originalFlashcards": 0,
+    "additionalQuestions": 4,
+    "totalQuestions": 4,
+    "quizlet": {
+      "url": "https://quizlet.com/696309219/aws-module-7-knowledge-check-flash-cards/",
+      "status": "Linked; card text unavailable",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 108,
+    "name": "Databases",
+    "file": "AcademyCloudFoundations_Module_08.pptx",
+    "slides": 64,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "108-1",
+        "title": "RDS availability and reads",
+        "slides": "5–29",
+        "terminology": [
+          "Failover",
+          "RDS availability and reads"
+        ]
+      },
+      {
+        "id": "108-2",
+        "title": "DynamoDB and keys",
+        "slides": "31–38",
+        "terminology": [
+          "Partition key and sort key together",
+          "DynamoDB and keys"
+        ]
+      },
+      {
+        "id": "108-3",
+        "title": "Aurora and Redshift",
+        "slides": "40–57",
+        "terminology": [
+          "Amazon Redshift",
+          "Aurora and Redshift"
+        ]
+      }
+    ],
+    "originalFlashcards": 0,
+    "additionalQuestions": 5,
+    "totalQuestions": 5,
+    "quizlet": {
+      "url": "https://quizlet.com/696316955/aws-module-8-knowledge-check-flash-cards/",
+      "status": "Linked; card text unavailable",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 109,
+    "name": "Cloud Architecture",
+    "file": "AcademyCloudFoundations_Module_09.pptx",
+    "slides": 67,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "109-1",
+        "title": "Well-Architected Framework",
+        "slides": "5–42",
+        "terminology": [
+          "Reliability",
+          "Well-Architected Framework"
+        ]
+      },
+      {
+        "id": "109-2",
+        "title": "Availability and recommendations",
+        "slides": "45–60",
+        "terminology": [
+          "AWS Trusted Advisor",
+          "Availability and recommendations"
+        ]
+      }
+    ],
+    "originalFlashcards": 0,
+    "additionalQuestions": 4,
+    "totalQuestions": 4,
+    "quizlet": {
+      "url": "https://quizlet.com/697519335/aws-knowledge-check-module-9-flash-cards/",
+      "status": "Linked; card text unavailable",
+      "duplicates": 0
+    }
+  },
+  {
+    "module": 110,
+    "name": "Automatic Scaling and Monitoring",
+    "file": "AcademyCloudFoundations_Module_10.pptx",
+    "slides": 42,
+    "coverage": "All slide text, tables, diagram appendices and embedded diagrams inspected; administrative and repeated artwork slides included in slide-coverage.json",
+    "topics": [
+      {
+        "id": "110-1",
+        "title": "Load balancing",
+        "slides": "5–12",
+        "terminology": [
+          "Application Load Balancer",
+          "Load balancing"
+        ]
+      },
+      {
+        "id": "110-2",
+        "title": "CloudWatch and Auto Scaling",
+        "slides": "14–36",
+        "terminology": [
+          "Adds instances",
+          "CloudWatch and Auto Scaling"
+        ]
+      }
+    ],
+    "originalFlashcards": 0,
+    "additionalQuestions": 5,
+    "totalQuestions": 5,
+    "quizlet": {
+      "url": "https://quizlet.com/697524293/aws-knowledge-check-module-10-flash-cards/",
+      "status": "Linked; card text unavailable",
       "duplicates": 0
     }
   }

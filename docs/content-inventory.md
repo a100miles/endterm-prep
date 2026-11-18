@@ -1,6 +1,6 @@
 # Content inventory
 
-Processed: 6 decks, 441 slides, 50 original Quizlet cards, 108 additional questions, 158 total unique question records, 43 theory topics.
+Processed: 16 decks, 1056 slides, 60 imported Quizlet cards, 155 additional questions, 215 total unique question records, 70 theory topics.
 
 | Module | Slides | Original cards | Added | Total |
 |---|---:|---:|---:|---:|
@@ -10,6 +10,16 @@ Processed: 6 decks, 441 slides, 50 original Quizlet cards, 108 additional questi
 | 4. Securing cloud resources | 64 | 10 | 13 | 23 |
 | 5. Flexible NoSQL with DynamoDB | 84 | 10 | 27 | 37 |
 | 6. REST APIs with API Gateway | 139 | 10 | 27 | 37 |
+| 101. Cloud Concepts Overview | 47 | 10 | 4 | 14 |
+| 102. Cloud Economics and Billing | 60 | 0 | 5 | 5 |
+| 103. AWS Global Infrastructure Overview | 26 | 0 | 4 | 4 |
+| 104. AWS Cloud Security | 82 | 0 | 5 | 5 |
+| 105. Networking and Content Delivery | 70 | 0 | 6 | 6 |
+| 106. Compute | 91 | 0 | 5 | 5 |
+| 107. Storage | 66 | 0 | 4 | 4 |
+| 108. Databases | 64 | 0 | 5 | 5 |
+| 109. Cloud Architecture | 67 | 0 | 4 | 4 |
+| 110. Automatic Scaling and Monitoring | 42 | 0 | 5 | 5 |
 
 No identical cards removed. One ambiguous original SDK card is self-assessed and excluded from automatic exam scoring. See the Sources screen and content source fields for all corrections.
 
@@ -73,3 +83,60 @@ No identical cards removed. One ambiguous original SDK card is self-assessed and
 - **Throttling, usage plans and authorization** (slides 70–79, 131–136): throttling, usage plan, API key, JWT, Cognito, Lambda authorizer
 - **Monitoring, caching and compression** (slides 80–87, 137–138): Latency, IntegrationLatency, CloudWatch, X-Ray, CloudTrail, Config, cache, gzip
 - **Putting the café API together** (slides 88–93, 139): mock endpoint, FoodProducts, create_report
+
+## Module 101
+
+- **Cloud models** (slides 5–13): IaaS, Cloud models
+- **Cloud economics and agility** (slides 14–21): Elasticity, Cloud economics and agility
+- **AWS services and adoption** (slides 22–40): People, AWS services and adoption
+
+## Module 102
+
+- **Pricing and TCO** (slides 5–29): AWS Pricing Calculator, Pricing and TCO
+- **Organizations and billing** (slides 30–47): AWS Budgets, Organizations and billing
+- **Support and cost analysis** (slides 48–58): Cost and Usage Report, Support and cost analysis
+
+## Module 103
+
+- **Regions and Availability Zones** (slides 5–10): Deploy across multiple Availability Zones, Regions and Availability Zones
+- **Edge and service categories** (slides 11–23): CloudFront edge location, Edge and service categories
+
+## Module 104
+
+- **Shared responsibility** (slides 5–15): The customer, Shared responsibility
+- **IAM and account protection** (slides 17–57): IAM role through an instance profile, IAM and account protection
+- **Security services and encryption** (slides 59–75): AWS Artifact, Security services and encryption
+
+## Module 105
+
+- **CIDR, VPCs and subnets** (slides 5–18): 251, CIDR, VPCs and subnets
+- **Connectivity and routing** (slides 20–31): Public NAT gateway, Connectivity and routing
+- **Network filtering** (slides 33–47): Network ACL, Network filtering
+- **DNS and content delivery** (slides 49–63): Amazon Route 53, DNS and content delivery
+
+## Module 106
+
+- **Launching EC2** (slides 9–34): AMI, Launching EC2
+- **Compute pricing** (slides 45–55): Spot Instances, Compute pricing
+- **Containers, Lambda and Beanstalk** (slides 56–84): Amazon ECR, Containers, Lambda and Beanstalk
+
+## Module 107
+
+- **Block, object and file** (slides 6–42): Amazon EFS, Block, object and file
+- **Archiving and lifecycle** (slides 46–59): S3 Lifecycle configuration, Archiving and lifecycle
+
+## Module 108
+
+- **RDS availability and reads** (slides 5–29): Failover, RDS availability and reads
+- **DynamoDB and keys** (slides 31–38): Partition key and sort key together, DynamoDB and keys
+- **Aurora and Redshift** (slides 40–57): Amazon Redshift, Aurora and Redshift
+
+## Module 109
+
+- **Well-Architected Framework** (slides 5–42): Reliability, Well-Architected Framework
+- **Availability and recommendations** (slides 45–60): AWS Trusted Advisor, Availability and recommendations
+
+## Module 110
+
+- **Load balancing** (slides 5–12): Application Load Balancer, Load balancing
+- **CloudWatch and Auto Scaling** (slides 14–36): Adds instances, CloudWatch and Auto Scaling

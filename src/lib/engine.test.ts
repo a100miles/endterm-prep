@@ -21,10 +21,10 @@ const config: Config = {
   exam: true,
 };
 describe("source-backed content", () => {
-  it("covers six decks and all 50 original cards", () => {
-    expect(modules).toHaveLength(6);
-    expect(modules.reduce((a, m) => a + m.slides, 0)).toBe(441);
-    expect(originalCards).toHaveLength(50);
+  it("covers both courses and preserves Developing source cards", () => {
+    expect(modules).toHaveLength(16);
+    expect(modules.reduce((a, m) => a + m.slides, 0)).toBe(1056);
+    expect(originalCards).toHaveLength(60);
     for (const m of [2, 3, 4, 5, 6])
       expect(originalCards.filter((q) => q.module === m)).toHaveLength(10);
   });
@@ -72,6 +72,16 @@ describe("selection and grading", () => {
       );
       expect(Math.max(...counts) - Math.min(...counts)).toBeLessThanOrEqual(1);
     }
+  });
+  it("covers every Foundations module in a Foundations-only mock", () => {
+    const selected = selectQuestions(questions, {
+      ...config,
+      course: "foundations",
+    });
+    expect(selected).toHaveLength(40);
+    expect(new Set(selected.map((q) => q.module))).toEqual(
+      new Set([101, 102, 103, 104, 105, 106, 107, 108, 109, 110]),
+    );
   });
   it("obeys practice filters and caps counts", () => {
     const selected = selectQuestions(questions, {

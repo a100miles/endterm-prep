@@ -1,5 +1,8 @@
+import { foundationQuizletUrls } from "./foundations";
+import { foundationCards } from "./foundation-questions";
 import type { Question } from "./types";
 export const quizletUrls: Record<number, string> = {
+  ...foundationQuizletUrls,
   2: "https://quizlet.com/ca/704589033/aws-module-2-knowledge-check-flash-cards/",
   3: "https://quizlet.com/875909579/aws-module-3-knowledge-check-flash-cards/",
   4: "https://quizlet.com/877920643/aws-developer-module-4-knowledge-check-flash-cards/",
@@ -687,4 +690,4 @@ q(
   [3],
   "IntegrationLatency measures the backend request/response interval. Latency includes the wider API Gateway processing interval. M06 slides 81, 137.",
 );
-export const originalCards = cards;
+export const originalCards = [...cards, ...foundationCards];

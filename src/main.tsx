@@ -4,9 +4,11 @@ import { HashRouter } from "react-router-dom";
 import { MotionConfig } from "motion/react";
 import { StudyProvider } from "./lib/store";
 import App from "./App";
-import "@fontsource-variable/manrope";
+import "@fontsource-variable/newsreader";
+import "@fontsource-variable/dm-sans";
 import "@fontsource/jetbrains-mono/400.css";
 import "./styles.css";
+import "./editorial.css";
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <HashRouter>

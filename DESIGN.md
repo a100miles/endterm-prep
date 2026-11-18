@@ -1,6 +1,6 @@
 ---
 name: Endterm Prep
-description: A focused, warm-paper study workspace.
+description: An editorial cloud study guide with paper tones, serif headings and ink-violet accents.
 colors:
   bg: "#f5f4ef"
   panel: "#fffefa"
@@ -32,33 +32,33 @@ colors:
   code-text: "#e1efe6"
 typography:
   display:
-    fontFamily: "Manrope Variable, sans-serif"
-    fontSize: "clamp(30px,3.5vw,44px)"
+    fontFamily: "DM Sans Variable, sans-serif"
+    fontSize: "clamp(2.7rem, 5.4vw, 4.9rem)"
     fontWeight: 650
     lineHeight: 1.25
     letterSpacing: "-.035em"
   headline:
-    fontFamily: "Manrope Variable, sans-serif"
+    fontFamily: "DM Sans Variable, sans-serif"
     fontSize: "24px"
     fontWeight: 650
     lineHeight: 1.25
     letterSpacing: "-.025em"
   title:
-    fontFamily: "Manrope Variable, sans-serif"
+    fontFamily: "DM Sans Variable, sans-serif"
     fontSize: "17px"
     fontWeight: 650
     lineHeight: 1.25
     letterSpacing: "-.015em"
   body:
-    fontFamily: "Manrope Variable, sans-serif"
+    fontFamily: "DM Sans Variable, sans-serif"
     fontSize: "15px"
     lineHeight: 1.65
   lesson:
-    fontFamily: "Manrope Variable, sans-serif"
+    fontFamily: "DM Sans Variable, sans-serif"
     fontSize: "14px"
     lineHeight: 1.9
   label:
-    fontFamily: "Manrope Variable, sans-serif"
+    fontFamily: "DM Sans Variable, sans-serif"
     fontSize: "13px"
     fontWeight: 600
   code:
@@ -124,6 +124,10 @@ components:
 ---
 
 # Design System: Endterm Prep
+
+## Current visual direction
+
+The November final review uses the editorial palette and typography in src/editorial.css. Newsreader headings sit above DM Sans controls and a horizontal desktop navigation. The mobile menu retains a drawer. The link and surface colors are defined as theme variables in the editorial stylesheet. Earlier base component rules below apply where the editorial stylesheet leaves them intact.
 
 ## Overview
 
