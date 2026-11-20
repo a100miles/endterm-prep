@@ -43,8 +43,26 @@ function setup(){
 }
 function current(){return quiz.list[quiz.pos];}
 function quizPage(){
- const q=current(),a=quiz.responses[quiz.pos],recall=!q.options.length;
- return '<div class="panel">'+heading(q,'QUESTION '+(quiz.pos+1)+' / '+quiz.list.length)+(recall?'<label for="recall">Your answer</label><textarea id="recall" '+(a.revealed?'readonly':'')+'>'+escapeHTML(a.note)+'</textarea>':('<p class="hint">Select '+(q.answers.length===1?'one answer':q.answers.length+' answers')+'.</p>'+choices(q,true,false,a.selected)))+(a.revealed?answer(q):'')+'<div class="actions">'+(recall?(a.revealed?btn('wrong','Missed it')+btn('correct','Got it','primary'):btn('compare','Compare with key','primary',!a.note.trim())):btn('submit',quiz.pos+1===quiz.list.length?'Finish quiz':'Submit answer','primary',a.selected.length!==q.answers.length))+'</div></div>';
+ const q=current();
+ const a=quiz.responses[quiz.pos];
+ const recall=!q.options.length;
+ const prompt=recall
+  ? '<label for="recall">Your answer</label><textarea id="recall" '+(a.revealed?'readonly':'')+'>'+escapeHTML(a.note)+'</textarea>'
+  : (a.revealed?'':'<p class="hint">Select '+(q.answers.length===1?'one answer':q.answers.length+' answers')+'.</p>')+choices(q,!a.revealed,a.revealed,a.selected);
+ let actions;
+ if(recall){
+  actions=a.revealed
+   ? btn('wrong','Missed it')+btn('correct','Got it','primary')
+   : btn('compare','Compare with key','primary',!a.note.trim());
+ }else{
+  actions=a.revealed
+   ? btn('continue',quiz.pos+1===quiz.list.length?'See results':'Next question','primary')
+   : btn('submit','Submit answer','primary',a.selected.length!==q.answers.length);
+ }
+ const feedback=a.revealed && !recall
+  ? '<p id="quiz-feedback" tabindex="-1"><strong>'+(a.ok?'Correct!':'Incorrect.')+'</strong></p>'
+  : '';
+ return '<div class="panel">'+heading(q,'QUESTION '+(quiz.pos+1)+' / '+quiz.list.length)+prompt+feedback+(a.revealed?answer(q):'')+'<div class="actions">'+actions+'</div></div>';
 }
 function start(list){quiz={list,pos:0,done:false,responses:list.map(()=>({note:'',selected:[],revealed:false,ok:false}))};render();}
 function finishQuestion(ok){
@@ -75,7 +93,17 @@ el('work').onclick=e=>{
  case 'shuffle':deck=shuffled(deck);index=0;flipped=false;break;
  case 'start':start(shuffled(pool()).slice(0,Number(el('length').value)));return;
  case 'compare':quiz.responses[quiz.pos].revealed=true;break;
- case 'submit':finishQuestion(current().answers.every(o=>quiz.responses[quiz.pos].selected.includes(o)));return;
+ case 'submit': {
+  const q=current();
+  const a=quiz.responses[quiz.pos];
+  if(a.revealed || a.selected.length!==q.answers.length)return;
+  a.ok=q.answers.every(o=>a.selected.includes(o));
+  a.revealed=true;
+  render();
+  el('quiz-feedback').focus();
+  return;
+ }
+ case 'continue':finishQuestion(quiz.responses[quiz.pos].ok);return;
  case 'correct':case 'wrong':finishQuestion(b.dataset.act==='correct');return;
  case 'again':quiz=null;break;
  case 'retry':start(shuffled(quiz.list.filter((q,i)=>!quiz.responses[i].ok)));return;
